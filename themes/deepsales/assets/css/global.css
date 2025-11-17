@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(../fonts/Montserrat-Bold.woff2) format("woff2"),
+         url(../fonts/Montserrat-Bold.ttf) format("ttf");
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url(../fonts/Montserrat-Medium.woff2) format("woff2"),
+         url(../fonts/Montserrat-Medium.ttf) format("ttf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat SemiBoldll";
+    src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"),
+         url(../fonts/Montserrat-SemiBold.ttf) format("ttf");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(../fonts/Montserrat-Regular) format("woff2"),
+         url(../fonts/Montserrat-Regular) format("ttf");
+    font-weight: 400;
+    font-display: swap;
+}
+:root {
+    font-size: 16px;
+    --title-f-f: "Montserrat Bold";
+    --middle-f-f: "Montserrat SemiBoldll";
+    --blac-navy: rgb(18, 47, 60);
+    --white: rgb(255, 255, 255);
+    --yellow: rgb(253, 214, 8);
+    --blue: rgb(235, 242, 246);
+    --title-s: 46px;
+    --middle-s: 18px;
+}
+.body {
+    font-family: "Montserrat Regular";
+    background: var(--white);
+    font-size: 16px;
+}
+.wrapper {
+    max-width: 1184px;
+    width: 100%;
+    margin: 0 auto;
+}
+.title-hero {
+
+}
+.title {
+
+}
+button, 
+.button {
+
+}
