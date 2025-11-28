@@ -13,7 +13,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "Montserrat SemiBoldll";
+    font-family: "Montserrat SemiBold";
     src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2"),
          url(../fonts/Montserrat-SemiBold.ttf) format("ttf");
     font-weight: 600;
@@ -29,7 +29,7 @@
 :root {
     font-size: 16px;
     --title-f-f: "Montserrat Bold";
-    --middle-f-f: "Montserrat SemiBoldll";
+    --middle-f-f: "Montserrat SemiBold";
     --black-navy: rgb(18, 47, 60);
     --white: rgb(255, 255, 255);
     --yellow: rgb(253, 214, 8);
@@ -54,19 +54,30 @@
     text-align: center;
     color: var(--black-navy);
 }
+.subtitle {
+    text-align: center;
+    font-size: 20px;
+    color: var(--black-navy);
+    font-family: "Montserrat Medium";
+    display: block;
+    margin-top: 10px;
+    line-height: 145%;
+}
 button, 
 .button {
     background: var(--yellow);
     padding: 14px 32px;
     color: var(--black-navy);
-    font-family: "Montserrat SemiBoldll";
+    font-family: var(--middle-f-f);
     font-size: 20px;
     border-radius: 50px;
-    margin-top: 50px;
+    margin: 50px auto 0;
     cursor: pointer;
     transition: 0.3s;
     box-sizing: border-box;
     border: 2px solid transparent;
+    text-align: center;
+    display: block;
 }
 button:hover, 
 .button:hover {
@@ -80,7 +91,7 @@ button:hover,
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 .header-wrap {
     display: flex;
@@ -149,21 +160,34 @@ button.header__button {
     transition: 0.3s;
     margin-top: 0;
     background-color: transparent;
+    margin: 0;
 }
 .header__button:hover {
     background: rgb(56, 158, 186);
+}
+section {
+    padding: 125px 0 70px 0;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 }
 @media screen and (max-width: 1300px) {
     .wrapper {
         padding: 0 30px;
     }
+    section {
+        padding: 100px 0 50px 0;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .subtitle {
+        font-size: var(--middle-s);
+    }
+
 }
 @media screen and (max-width: 1024px) {
     .title {
-        font-family: var(--title-f-f);
         font-size: 46px;
-        text-align: center;
-        color: var(--black-navy);
     }
     button, 
     .button {

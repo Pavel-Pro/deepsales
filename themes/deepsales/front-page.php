@@ -68,6 +68,7 @@
                     </ul>
                 </div>
             </div>
+            <button class="button button__problem">Хочу розібрати мою ситуацію</button>
         </div>
     </section>
 
