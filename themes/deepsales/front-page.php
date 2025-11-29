@@ -71,5 +71,15 @@
             <button class="button button__problem">Хочу розібрати мою ситуацію</button>
         </div>
     </section>
+    <section class="solution">
+        <div class="wrapper">
+            <h1 class="title title__solution">Як ми вирішуємо проблеми відділу продажу</h1>
+            <div class="solution__items">
+                <div class="solution__item"></div>
+                <div class="solution__item"></div>
+                <div class="solution__item"></div>
+            </div>
+        </div>  
+    </section>
 
 <?php get_footer(); ?>

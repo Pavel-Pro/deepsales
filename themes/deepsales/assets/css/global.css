@@ -175,7 +175,7 @@ section {
         padding: 0 30px;
     }
     section {
-        padding: 100px 0 50px 0;
+        padding: 105px 0 50px 0;
     }
     .title {
         font-size: 40px;
@@ -183,11 +183,10 @@ section {
     .subtitle {
         font-size: var(--middle-s);
     }
-
 }
 @media screen and (max-width: 1024px) {
     .title {
-        font-size: 46px;
+        font-size: 30px;
     }
     button, 
     .button {
@@ -327,9 +326,24 @@ section {
     }
 }
 @media screen and (max-width: 768px) {
+    section {
+        padding: 85px 0 30px 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .wrapper {
+        padding: 0 15px;
+    }
     button, .button {
         font-size: 15px;
         padding: 12px 26px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .subtitle {
+        font-size: 16px;
+        margin-top: 8px;
     }
     .header-logo {
         width: 120px;
@@ -345,5 +359,15 @@ section {
     }
     .menu-active {
         height: 90vh;
+    }
+}
+@media screen and (max-width: 375px) {
+    button.header__button {
+        padding: 6px 8px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+        button, .button {
+        padding: 12px 20px;
     }
 }
