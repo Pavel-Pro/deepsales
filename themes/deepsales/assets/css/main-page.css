@@ -116,6 +116,148 @@
     margin-top: 28px;
 }
 /* and problem section */
+/* start section solution */
+.solution {
+    background: var(--white);
+    padding-top: 15px;
+}
+.solution__items {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 370px;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+.solution__item:last-child {
+    grid-column: span 2;
+}
+.solution__item {
+    background: var(--blue);
+    border-radius: 30px;
+    padding: 30px;
+}
+.solution__item_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.solution__item_top:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+} 
+.solution__item:first-child .solution__item_top:after {
+    background: url(../img/icon/loop.svg)top right / auto no-repeat;
+}
+.solution__item:nth-child(2n) .solution__item_top:after {
+    background: url(../img/icon/settings.svg)top right / auto no-repeat;
+}
+.solution__item:last-child .solution__item_top:after {
+    background: url(../img/icon/rocket.svg)top right / auto no-repeat;
+}
+.solution__stage {
+    background: var(--yellow);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: var(--middle-f-f);
+    font-size: 22px;
+    margin-right: 16px;
+}
+.solution__item_title {
+    font-family: var(--middle-f-f);
+    font-size: 28px;
+}
+.subtitle__solution_item {
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: rgb(14, 116, 144);
+}
+.solution-list {
+    margin-top: 20px;
+    list-style-type: none;
+}
+.solution__item:first-child .solution-list {
+    column-count: 2;
+}
+.solution__item:last-child .solution-list {
+    column-count: 3;
+}
+.solution-list__item {
+    position: relative;
+    padding-left: 34px;
+}
+.solution-list__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/icon/solution-arrow-icon.svg) center left / auto no-repeat;
+}
+.solution-list__item + .solution-list__item {
+    margin-top: 15px;
+}
+.solution__item:first-child 
+.solution-list__item:last-child {
+    background: var(--white);
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    padding-left: 0;
+}
+.solution__item:first-child 
+.solution-list__item:last-child:after {
+    display: none;
+}
+.solution-sublist__title {
+    background: rgb(216, 231, 237);
+    text-align: center;
+    padding: 13px 0;
+    width: 100%;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: var(--middle-f-f);
+    font-size: var(--middle-s);
+}
+.solution-sublist {
+    list-style-type: none;
+    padding: 25px 20px;
+}
+.solution-sublist__item {
+    padding-left: 34px;
+    position: relative;
+}
+.solution-sublist__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/icon/solution-check-icon.svg)center left / auto no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.solution-sublist__item + .solution-sublist__item {
+    margin-top: 22px;
+}
+.solution-list__message {
+    background: var(--white);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: var(--middle-f-f);
+    font-size: var(--middle-s);
+    margin-top: 15px;
+}
+/* end section solution */
 @media screen and (max-width: 1300px) {
     .hero {
         height: 100%;
@@ -145,6 +287,32 @@
     }
     .problem-lists {
         gap: 20px;
+    }
+    .solution {
+        padding-top: 0;
+    }
+    .solution__items {
+        grid-template-columns: 1fr 290px;
+        gap: 20px;
+    }
+    .solution__item {
+        padding: 16px;
+    }
+    .solution__stage {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+    .solution__item_title {
+        font-size: 24px;
+    }
+    .solution-list__item {
+        padding-left: 26px;
+    }
+    .solution-sublist {
+        padding: 22px 16px;
+    }
+    .solution-sublist__item {
+        padding-left: 26px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -179,6 +347,36 @@
         height: 30px;
         width: 30px;
     }
+    .solution__items {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 20px 0;
+        grid-auto-flow: column;
+    }
+    .solution__item:first-child .solution__item_top:after {
+        background: url(../img/icon/loop.svg) top right / 26px no-repeat;
+    }
+    .solution__item:nth-child(2n) .solution__item_top:after {
+        background: url(../img/icon/settings.svg) top right / 26px no-repeat;
+    }
+    .solution__item:last-child .solution__item_top:after {
+        background: url(../img/icon/rocket.svg) top right / 26px no-repeat;
+    }
+    .solution-list__item:after {
+        background: url(../img/icon/solution-arrow-icon.svg) center left / 18px no-repeat;
+    }
+    .solution__item:last-child .solution-list {
+        column-count: 2;
+    }
+    .solution-sublist {
+        padding: 16px 16px;
+    }
+    .solution-sublist__item:after {
+        background: url(../img/icon/solution-check-icon.svg) center left / 18px no-repeat;
+    }
+    .solution__item:last-child .solution-list {
+        column-count: 1;
+    }
 }
 @media screen and (max-width: 820px) {
     .problem-lists {
@@ -196,6 +394,9 @@
     }
     .problem__list {
         margin-top: 18px;
+    }
+    .solution__items {
+        margin-top: 30px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -239,5 +440,50 @@
         height: 18px;
         width: 18px;
     }
-
+    .solution {
+        margin-top: -20px;
+    }
+    .solution__item {
+        border-radius: 15px;
+        padding: 16px 12px;
+    }
+    .solution__item_title {
+        font-size: 22px;
+    }
+    .solution__stage {
+        font-size: 16px;
+        border-radius: 7px;
+        padding: 4px 8px;
+    }
+    .solution-list {
+        margin-top: 16px;
+    }
+    .solution__item:first-child .solution-list {
+        column-count: 1;
+    }
+    .solution__item:first-child 
+    .solution-list__item:last-child {
+        border-radius: 7px;
+    }
+    .solution-sublist__title {
+        padding: 8px 0;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        font-size: 16px;
+    }
+    .solution-sublist {
+        padding: 10px 8px;
+    }
+    .sublist__item {
+        margin-top: 14px;
+    }
+    .subtitle__solution_item {
+        font-size: 14px;
+    }
+    .solution-list__message {
+        border-radius: 7px;
+        padding: 12px 8px;
+        font-size: 16px;
+        margin-top: 15px;
+    }
 }
