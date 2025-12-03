@@ -344,6 +344,60 @@
 .effect__team .effect__item:nth-child(even) {
     margin-top: -24px;
 }
+.steps {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto;
+    max-width: 1300px;
+    z-index: -1;
+}
+.step {
+    background:linear-gradient(180deg, rgba(105, 207, 235, 0.09) 0%, 
+                                       rgba(105, 207, 235, 0) 100%);
+    border: 1px solid;
+    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, 
+                     rgba(37, 215, 255, 0) 9.62%);
+    width: 65px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.step:first-child {
+    height: 20%;
+}
+.step:nth-child(2) {
+    height: 25%;
+}
+.step:nth-child(3) {
+    height: 30%;
+}
+.step:nth-child(4) {
+    height: 35%;
+}
+.step:nth-child(5) {
+    height: 40%;
+}
+.step:nth-child(6) {
+    height: 45%;
+}
+.step:nth-child(7) {
+    height: 50%;
+}
+.step:nth-child(8) {
+    height: 55%;
+}
+.step:nth-child(9) {
+    height: 60%;
+}
+.step:last-child {
+    height: 67%;
+}
 /* end section effect */
 /* start section about */
 /* end section about */
@@ -406,6 +460,9 @@
     }
     .solution-sublist__item {
         padding-left: 26px;
+    }
+    .effect__items_title {
+        font-size: 24px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -470,6 +527,21 @@
     .solution__item:last-child .solution-list {
         column-count: 1;
     }
+    .effect__items {
+        gap: 10px;
+    }
+    .effect__item_title {
+        font-size: 16px;
+    }
+    .effect__item_text {
+        font-size: 15px;
+    }
+    .effect__business .effect__item:after {
+        background: url(../img/icon/effect-arrow-blue.svg) top center / 48px no-repeat;
+    }
+    .effect__team .effect__item:after {
+        background: url(../img/icon/effect-arrow-orange.svg) top center / 48px no-repeat;
+    }
 }
 @media screen and (max-width: 820px) {
     .problem-lists {
@@ -490,6 +562,47 @@
     }
     .solution__items {
         margin-top: 30px;
+    }
+    .step {
+        width: 50px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .effect__items {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 10px;
+    }
+    .effect__business {
+        margin-bottom: 30px;
+    }
+    .effect__item {
+        flex-basis: 32%;
+        padding-top: 60px;
+        position: relative;
+        text-align: center;
+        color: rgb(229, 241, 252);
+    }
+    .effect__business .effect__item:first-child,
+    .effect__business .effect__item:last-child {
+        padding: 60px 0 0 0;
+    }
+    .effect__business .effect__item:first-child:after,
+    .effect__business .effect__item:last-child:after {
+        background-position-y: 0;
+    }
+    .effect__business .effect__item:nth-child(even) {
+        padding: 60px 0 0 0;
+    }
+    .effect__business .effect__item:nth-child(even):after {
+        background-position-y: 0;
+    }
+    .effect__team .effect__item:first-child,
+    .effect__team .effect__item:last-child {
+        margin-top: 0;
+    }
+    .effect__team .effect__item:nth-child(even) {
+        margin-top: 0;
     }
 }
 @media screen and (max-width: 768px) {
@@ -578,5 +691,39 @@
         padding: 12px 8px;
         font-size: 16px;
         margin-top: 15px;
+    }
+    .steps {
+        display: none;
+    }
+    .effect__container {
+        margin-top: 30px;
+    }
+    .effect__items_title {
+        font-size: 22px;
+    }
+    .effect__items {
+        margin-top: 20px;
+        gap: 20px 14px;
+    }
+    .effect__item {
+        flex-basis: 48%;
+        padding-top: 38px;
+    }
+    .effect__business .effect__item:after {
+        background: url(../img/icon/effect-arrow-blue.svg) top center / 30px no-repeat;
+    }
+    .effect__team .effect__item:after {
+        background: url(../img/icon/effect-arrow-orange.svg) top center / 30px no-repeat;
+    }
+    .effect__business .effect__item:first-child,
+    .effect__business .effect__item:last-child {
+        padding: 38px 0 0 0;
+    }
+    .effect__business .effect__item:nth-child(even) {
+        padding: 38px 0 0 0;
+    }
+    .effect__item_text {
+        width: 90%;
+        margin: 0 auto;
     }
 }
