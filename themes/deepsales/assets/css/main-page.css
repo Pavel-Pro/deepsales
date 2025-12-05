@@ -400,6 +400,82 @@
 }
 /* end section effect */
 /* start section about */
+.about {
+    position: relative;
+    padding-top: 15px;
+    z-index: 18;
+}
+.about__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.title__about {
+    border-bottom: 8px solid var(--yellow);
+    padding-bottom: 20px;
+    white-space: nowrap;
+    margin-right: 50px;
+}
+.about__top__text {
+    color: rgb(14, 116, 144);
+    flex-basis: 40%;
+    font-size: var(--middle-s);
+}
+.about__items {
+    margin-top: 50px;
+    background: var(--blue);
+    padding: 30px 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    position: relative;
+}
+.about__item_title {
+    color: var(--black-navy);
+    font-size: 28px;
+    font-family: var(--middle-f-f);
+}
+.about__item {
+    flex-basis: 30%;
+}
+.about-list {
+    margin-top: 30px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.about-list__item {
+    padding-left: 54px;
+    height: 46px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.about-list__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/icon/solution-arrow-icon.svg)center left / 44px no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.about__item:nth-child(2) .about-list__item:after {
+    background: url(../img/icon/arrow-yellow.svg)center left / 44px no-repeat;
+}
+.about-list__item + .about-list__item {
+    margin-top: 16px;
+}
+.about__img {
+    position: absolute;
+    bottom: 0;
+    left: 67%;
+    transform: translateY(130px);
+    width: 450px;
+}
 /* end section about */
 /* start section testimonials */
 /* end section testimonials */
@@ -463,6 +539,27 @@
     }
     .effect__items_title {
         font-size: 24px;
+    }
+    .title__about {
+        margin-right: 30px; 
+    }
+    .about__item_title {
+        font-size: 24px;
+    }
+    .about__img {
+        left: 60%;
+        transform: translateY(100px);
+        width: auto;
+    }
+    .about__top__text {
+        flex-basis: 35%;
+    }
+    .about__items {
+        padding: 16px;
+        gap: 20px;
+    }
+    .about-list__item {
+        padding-left: 48px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -542,6 +639,33 @@
     .effect__team .effect__item:after {
         background: url(../img/icon/effect-arrow-orange.svg) top center / 48px no-repeat;
     }
+    .title__about {
+        border-bottom: 5px solid var(--yellow);
+        padding-bottom: 10px;
+    }
+    .about__top__text {
+        flex-basis: 70%;
+        font-size: 16px;
+    }
+    .about__item {
+        flex-basis: 33%;
+    }
+    .about-list {
+        margin-top: 20px;
+    }
+    .about-list__item:after {
+        background: url(../img/icon/solution-arrow-icon.svg) center left / 18px no-repeat;
+    }
+    .about-list__item {
+        padding-left: 26px;
+    }
+    .about__item:nth-child(2) .about-list__item:after {
+        background: url(../img/icon/arrow-yellow.svg) center left / 18px no-repeat;
+    }
+    .about__img {
+        left: 68%;
+        transform: translateY(50px);
+    }
 }
 @media screen and (max-width: 820px) {
     .problem-lists {
@@ -603,6 +727,17 @@
     }
     .effect__team .effect__item:nth-child(even) {
         margin-top: 0;
+    }
+    .about__items {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .about-list__item {
+        height: auto;
+    }
+    .about__img {
+        left: 59%;
+        transform: translateY(50px);
     }
 }
 @media screen and (max-width: 768px) {
@@ -725,5 +860,28 @@
     .effect__item_text {
         width: 90%;
         margin: 0 auto;
+    }
+    .about__top {
+        flex-direction: column;
+    }
+    .title__about {
+        border-bottom: 3px solid var(--yellow);
+        padding-bottom: 8px;
+        margin-right: 0;
+    }
+    .about__top__text {
+        flex-basis: 100%;
+        margin-top: 8px;
+    }
+    .about__items {
+        border-radius: 15px;
+    }
+    .about-list {
+        margin-top: 16px;
+    }
+    .about__img {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 14px);
     }
 }

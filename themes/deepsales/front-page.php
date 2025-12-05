@@ -283,6 +283,12 @@
                         </li>
                     </ul>
                 </div>
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.webp" media="(min-width: 1301px)">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-laptop-img.webp" media="(min-width: 1025px)">
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/about-tab-img.webp" media="(max-width: 1024px)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-img.webp" alt="Євгеній Попсуй" class="about__img" fetchpriority="low" loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
