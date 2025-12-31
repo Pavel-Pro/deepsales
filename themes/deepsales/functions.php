@@ -50,6 +50,10 @@ function deepsales_scripts() {
     wp_enqueue_style('kurs-page-style', get_template_directory_uri() . '/assets/css/kurs-page.css', array(), filemtime(get_theme_file_path('/assets/css/kurs-page.css')));
     wp_enqueue_style('profile-page-style', get_template_directory_uri() . '/assets/css/profile-page.css', array(), filemtime(get_theme_file_path('/assets/css/profile-page.css')));
 
+    if ( is_page(['privacy-policy', 'public-offer']) ) {
+        wp_enqueue_style('policy-page-style', get_template_directory_uri() . '/assets/css/policy.css', array(), filemtime(get_theme_file_path('/assets/css/policy.css')));
+    }
+
     wp_enqueue_script('jquery', array(), false, ['in_footer' => true]);
     wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array('jquery'), false, ['in_footer' => true]);
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), false, ['in_footer' => true]);

@@ -13,6 +13,7 @@
                 </div>
                 <div class="hero-right">
                     <picture>
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hero-photo-main-mob.webp" media="(max-width: 768px)">
                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/hero-photo-main-tab.webp" media="(max-width: 1024px)">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero-photo-main.webp" alt="Євгеній Попсуй" class="hero-img" fetchpriority="high">
                     </picture>

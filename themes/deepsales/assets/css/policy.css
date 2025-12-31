@@ -1,0 +1,146 @@
+.privacy {
+    background: linear-gradient(0deg, #0E2E3C, #0E2E3C), 
+                linear-gradient(109.5deg, #0E2E3C 14.76%, #0F4C4B 100%), 
+                linear-gradient(109.5deg, #122F3C 14.76%, #164458 100%);
+    position: relative;
+    z-index: 16;
+}
+ol {
+    list-style: none;
+    counter-reset: li;
+}
+ol > li:before {
+    counter-increment: li;
+    content: counters(li, ".") ". ";
+}
+.privacy {
+    margin-top: -0;
+}
+.title__privacy {
+    color: var(--white);
+}
+.date-update {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    margin-top: 10px;
+}
+.privacy-container {
+    background: var(--white);
+    border-radius: 60px;
+    padding: 30px;
+    margin-top: 30px;
+}
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 15px;
+}
+a:hover {
+    text-decoration: none;
+}
+h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+strong {
+    text-transform: uppercase;
+    color: var(--black-navy);
+    font-size: 28px;
+    font-family: var(--middle-f-f);
+}
+p {
+    margin-top: 15px;
+}
+span {
+    margin-top: 20px;
+    font-weight: 600;
+    display: block;
+}
+.content > ol > li {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+} 
+li {
+    margin-top: 10px;
+}
+li > p {
+    font-size: 16px;
+    text-transform: none;
+}
+li > ol {
+    margin-left: 10px;
+}
+li > ol > li {
+    margin-left: 7px;
+    font-size: 16px;
+    text-transform: none;
+}
+li > ol > li > ol > li {
+    font-size: 14px;
+}
+ul {
+    padding-left: 10px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+table {
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 3px solid rgb(14, 116, 144);
+}
+thead {
+    background: var(--black-navy);
+}
+th {
+    color: var(--white);
+    border: 1px solid var(--white);
+    vertical-align: middle;
+    padding: 10px 5px;
+}
+tr:nth-child(even) {
+    background: var(--blue);
+}
+td {
+    padding: 10px 5px;
+    border: 1px solid rgb(14, 116, 144);
+    font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+    .privacy-container {
+        border-radius: 30px;
+        padding: 15px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .content > ol > li {
+        font-size: 16px;
+        margin-top: 18px;
+    }
+        li > ol > li {
+        font-size: 15px;
+    }
+    th {
+        padding: 8px 3px;
+    }
+    td {
+        padding: 8px 3px;
+        font-size: 14px;
+        hyphens: auto;
+        word-break: break-all;
+    }
+    a {
+        font-size: 14px;
+    }
+    strong {
+        font-size: 16px;
+    }
+    h3 {
+        margin-top: 15px;
+        font-size: 21px;
+    }
+}

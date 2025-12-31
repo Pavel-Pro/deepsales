@@ -28,8 +28,8 @@
                 </div>
                 <div class="footer__bottom">
                     <span class="copy">Deepsales © 2025. Усі права захищені.</span>
-                    <a href="" class="policy__link">Публічна оферта</a>
-                    <a href="" class="policy__link">Політика конфіденційності</a>
+                    <a href="/public-offer" class="policy__link">Публічна оферта</a>
+                    <a href="/privacy-policy" class="policy__link">Політика конфіденційності</a>
                 </div>
             </div>
         </footer>    
