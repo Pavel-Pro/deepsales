@@ -32,6 +32,9 @@
                     <a href="/privacy-policy" class="policy__link">Політика конфіденційності</a>
                 </div>
             </div>
+            <div class="callback-form">
+                <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
+            </div>
         </footer>    
     </main>
     <?php wp_footer(); ?>

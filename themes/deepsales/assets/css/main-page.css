@@ -638,6 +638,13 @@ input[type="submit"] {
 .wpcf7-spinner {
     display: none;
 }
+.wpcf7-not-valid-tip {
+    font-size: 14px;
+    margin-top: 4px;
+}
+form p {
+    color: rgb(96, 122, 134);
+}
 /* end section form */
 /* start contact page */
 .contact-page {
@@ -827,6 +834,14 @@ input[type="submit"] {
     margin-top: 0;
 }
 .wpcf7-spinner {
+    display: none;
+}
+.contact-page .wpcf7-not-valid-tip {
+    color: #dc3232;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.contact-page .wpcf7-spinner {
     display: none;
 }
 /* end contect page */
@@ -1035,6 +1050,39 @@ input[type="submit"] {
     }
     .consultation-form__bottom p {
         margin-right: 20px;
+    }
+    .contact__item:nth-child(odd) {
+        padding: 16px;
+    }
+    .contact-page .icon-wrap {
+        width: 40px;
+        height: 40px;
+    }
+    .contact-page .icon-wrap svg {
+        width: 20px;
+    }
+    .contact-page .contact__phone {
+        font-size: 16px;
+    }
+    .contact-page .contact__email {
+        font-size: 14px;
+    }
+    .contact-page .contact__name {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .contact-page .contact__skills {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    .contact-page span {
+        font-size: 16px;
+    }
+    .contact-page .social__link {
+        font-size: 14px;
+    }
+    .contact-page label {
+        flex-basis: 45%;
     }
 }
 @media screen and (max-width: 820px) {
@@ -1299,16 +1347,53 @@ input[type="submit"] {
         height: 40px;
         margin-top: 4px;
     }
-    input[type="submit"] {
-        font-size: 15px;
-        padding: 12px 26px;
-    }
     .consultation .consultation-form__bottom {
         margin-top: 5px;
         display: flex;
         flex-direction: column;
     }
     input[type="submit"] {
+        margin-top: 14px;
+        height: auto;
+    }
+    .contact-page .title__contact-page {
+        margin-top: 55px;
+    }
+    .contact__items {
+        flex-direction: column;
+    }
+    .contact__item + .contact__item {
+        margin-top: 20px;
+    }
+    .contact__item:first-child {
+        order: 2;
+        margin-top: 20px;
+    }
+    .contact__item:before {
+        width: 290px;
+        height: 370px;
+    }
+    .contact-page .contact__wrap + .contact__wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+    }
+    .contact-page form {
+        border-radius: 15px;
+    }
+    .contact-page label {
+        flex-basis: 100%;
+    }
+    .contact-page input {
+        height: 40px;
+        margin-top: 4px;
+    }
+    .contact-page .consultation-form__bottom {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-page input[type="submit"] {
         margin-top: 14px;
         height: auto;
     }
