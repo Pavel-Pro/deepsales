@@ -33,6 +33,22 @@
                     <a href="/privacy-policy" class="policy__link">Політика конфіденційності</a>
                 </div>
             </div>
+            <div class="cookie">
+                <div class="wrapper">
+                    <div class="cookie__items">
+                        <div class="cookie__item">
+                            <h5 class="title title__cookie">Ми використовуємо файли cooki</h5>
+                            <p class="cookie__text">
+                                Цей вебсайт використовує файли cookie для покращення вашого досвіду, аналізу трафіку та персоналізації контенту. Продовжуючи користуватися сайтом, ви погоджуєтесь на використання файлів cookie відповідно до Політики конфіденційності.
+                            </p>
+                        </div>
+                        <div class="cookie__item">
+                            <button class="button button__cookie">Прийняти</button>
+                            <button class="button button__cookie">Відхилити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="callback-form">
                 <div class="form__background"></div>
                     <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
