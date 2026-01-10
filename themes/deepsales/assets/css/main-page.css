@@ -845,6 +845,102 @@ input[type="submit"] {
     display: none;
 }
 /* end contect page */
+/* star callback form */
+.callback-form {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.form__background {
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 47, 60, 0.5);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.form__close {
+    align-self: flex-end;
+    border: 1px solid var(--black-navy);
+    border-radius: 5px;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.close__item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--black-navy);
+    transform: rotate(45deg) translate(8px, 8px);
+    border-radius: 5px;
+}
+.close__item:last-child {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.callback-form  form {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.callback-form label {
+    color: rgb(30, 64, 93);
+    display: block;
+}
+label > span {
+    display: block;
+}
+.callback-form label + label {
+    margin-top: 30px;
+}
+.callback-form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(155, 177, 186);
+    border-radius: 8px;
+    padding-left: 16px;
+    color: rgb(126, 149, 160);
+    margin-top: 4px;
+}
+.callback-form input::placeholder {
+    color: rgb(126, 149, 160);
+}
+.callback-form input[type="submit"] {
+    color: var(--black-navy);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    width: auto;
+    height: auto;
+    padding: 14px 32px;
+    margin-top: 50px;
+}
+.callback-form input[type="submit"]:hover {
+    background: var(--black-navy);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+.callback-form {
+    display: none;
+}
+/* end callback form */
 @media screen and (max-width: 1300px) {
     .hero {
         height: 100%;
@@ -1169,6 +1265,9 @@ input[type="submit"] {
     .consultation label {
         font-size: 14px;
     }
+    .callback-form label {
+        font-size: 14px;
+    }
 }
 @media screen and (max-width: 768px) {
     .hero {
@@ -1395,6 +1494,29 @@ input[type="submit"] {
     }
     .contact-page input[type="submit"] {
         margin-top: 14px;
+        height: auto;
+    }
+    .callback-form form {
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .callback-form label {
+        flex-basis: 100%;
+    }
+    .callback-form label + label {
+        margin-top: 20px;
+    }
+    .callback-form input {
+        height: 40px;
+        margin-top: 4px;
+    }
+    .callback-form .consultation-form__bottom {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .callback-form input[type="submit"] {
+        margin-top: 25px;
         height: auto;
     }
 }

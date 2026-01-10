@@ -41,7 +41,7 @@
     font-family: "Montserrat Regular";
     background: var(--white);
     font-size: 16px;
-    position: relative;
+    width: 100%;
 }
 .wrapper {
     max-width: 1184px;
@@ -175,7 +175,6 @@ section {
 .footer {
     background: var(--black-navy);
     margin-top: -57px;
-    position: relative;
     padding: 106px 0 50px;
     z-index: 14;
 }

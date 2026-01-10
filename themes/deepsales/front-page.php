@@ -9,7 +9,7 @@
                     <p class="text-hero">
                         Власникам і керівникам: процеси, метрики, дисципліна в CRM, навички команди й регулярний менеджмент — з прогнозованим результатом
                     </p>
-                    <button class="button-hero">Замовити консультацію</button>
+                    <button class="button-hero callform">Замовити консультацію</button>
                 </div>
                 <div class="hero-right">
                     <picture>
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="button button__problem">Хочу розібрати мою ситуацію</button>
+            <button class="button button__problem callform">Хочу розібрати мою ситуацію</button>
         </div>
     </section>
     <section class="solution">
@@ -175,7 +175,7 @@
                     </ul>
                 </div>
             </div>
-            <button class="button solution__button">Почати з діагностики</button>
+            <button class="button solution__button callform">Почати з діагностики</button>
         </div>  
     </section>
     <section class="effect">
@@ -229,7 +229,7 @@
                     </div>
                 </div>
             </div>
-             <button class="button effect__button">Обговорити мій кейс</button>
+             <button class="button effect__button callform">Обговорити мій кейс</button>
         </div>
         <div class="steps">
             <div class="step"></div>

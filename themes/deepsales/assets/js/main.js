@@ -49,4 +49,16 @@
             } 
         });
 
+
+        $('.callform').on('click', function() {
+            $('.callback-form').show();
+            $('.body').css('overflow', 'hidden');
+        });
+
+        $('.form__close, .form__background').on('click', function() {
+            $('.callback-form').hide();
+            $('.body').css('overflow', 'visible');
+        });
+
+
     }(jQuery));

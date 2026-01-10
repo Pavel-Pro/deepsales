@@ -1,3 +1,4 @@
+        </main>
         <footer class="footer">
             <div class="wrapper">
                 <div class="footer-top">
@@ -33,10 +34,10 @@
                 </div>
             </div>
             <div class="callback-form">
-                <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
+                <div class="form__background"></div>
+                    <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
             </div>
         </footer>    
-    </main>
     <?php wp_footer(); ?>
 </body>
 </html>
