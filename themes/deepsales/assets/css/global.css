@@ -217,6 +217,34 @@ section {
     margin-left: 30px;
 }
 /* end footer section */
+/* start 404 page */
+.error-page {
+    background: linear-gradient(0deg, #0E2E3C, #0E2E3C), 
+                linear-gradient(109.5deg, #122F3C 14.76%, #164458 100%);
+    position: relative;
+    height: 81vh;
+    display: flex;
+    align-items: center;
+}
+.title__error {
+    color: var(--white);
+}
+.title__error-page {
+    font-size: 170px;
+    color: var(--blue);
+    text-align: center;
+    display: block;
+    font-family: var(--title-f-f);
+}
+.text__error {
+    display: block;
+    color: var(--white);
+    text-align: center;
+}
+.btn__error {
+    width: fit-content;
+}
+/* end 404 page */
 /* start cookie section */
 .cookie {
     position: fixed;
@@ -226,7 +254,7 @@ section {
     width: 100%;
     background: var(--white);
     border-top: 4px solid rgb(14, 116, 144);
-    padding: 24px;
+    padding: 24px 0;
 }
 .cookie__items {
     display: flex;
@@ -463,6 +491,16 @@ h5.title {
         margin-right: 0;
         font-size: 14px;
     }
+    .cookie__item:first-child {
+        margin-right: 20px;
+    }
+    .cookie__item:last-child {
+        flex-direction: column;
+    }
+    .cookie__item button:first-child {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
 }
 @media screen and (max-width: 820px) {
     .footer {
@@ -489,6 +527,20 @@ h5.title {
     }
     .policy__link + .policy__link {
         margin-left: 20px;
+    }
+    .cookie {
+        background: var(--white);
+        border-top: 2px solid rgb(14, 116, 144);
+        padding: 10px 0;
+    }
+    h5.title {
+        font-size: 16px;
+    }
+    .cookie__item button:first-child {
+        margin-bottom: 5px;
+    }
+    .cookie__item button {
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -544,6 +596,21 @@ h5.title {
         margin-top: 20px;
         font-size: 12px;
         order: 2;
+    }
+    .cookie__items {
+        flex-direction: column;
+        text-align: center;
+    }
+    h5.title {
+        text-align: center;
+    }
+    .cookie__item button:first-child {
+        margin-bottom: 5px;
+        margin-right: auto;
+        margin-top: 14px;
+    }
+    .title__error-page {
+        font-size: 120px;
     }
 }
 @media screen and (max-width: 375px) {

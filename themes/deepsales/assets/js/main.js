@@ -61,4 +61,18 @@
         });
 
 
+        $('.button__cookie:first-child').on('click', function() {
+
+        $('.cookie').remove();
+        document.cookie = "cookieAgree=true; path=/; max-age=31536000";
+
+        });
+
+        $('.button__cookie:last-child').on('click', function() {
+
+            $('.cookie').remove();
+
+        });
+
+
     }(jQuery));
