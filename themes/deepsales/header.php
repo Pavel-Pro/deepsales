@@ -46,10 +46,10 @@
                     ')); ?>
                 </div>
                 <div class="phone-wrap">
-                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <?= file_get_contents(get_attached_file(tof('social_icon'))); ?>
                         <path d="M2.18182 0H6.54545L8.72727 5.45455L6 7.09091C7.16832 9.45985 9.0856 11.3771 11.4545 12.5455L13.0909 9.81818L18.5455 12V16.3636C18.5455 16.9423 18.3156 17.4972 17.9064 17.9064C17.4972 18.3156 16.9423 18.5455 16.3636 18.5455C12.1083 18.2869 8.09471 16.4798 5.08018 13.4653C2.06564 10.4507 0.258599 6.43717 0 2.18182C0 1.60316 0.229869 1.04821 0.63904 0.63904C1.04821 0.229869 1.60316 0 2.18182 0Z" fill="white"/>
                     </svg>
-                    <a href="tel:380932855827" class="header-phone__link">+38 (093) 285-58-27</a>
+                    <a href="tel:<?= tof('phone_link'); ?>" class="header-phone__link"><?= tof('phone_text'); ?></a>
                 </div>
                 <button class="header__button">Мій кабінет</button>
             </div>

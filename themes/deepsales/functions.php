@@ -58,3 +58,6 @@ function deepsales_scripts() {
     wp_enqueue_script('swiper-js', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array('jquery'), false, ['in_footer' => true]);
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), false, ['in_footer' => true]);
 }
+
+
+require_once __DIR__ . '/inc/carbon-fields/index.php';

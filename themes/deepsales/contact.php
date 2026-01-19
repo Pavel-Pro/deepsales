@@ -10,6 +10,19 @@ Template Name: Contact
         <h1 class="title title__contact-page"><?php echo the_title(); ?></h1>
         <div class="contact__items">
             <div class="contact__item">
+                <?php $contact = tof('contact'); ?>
+                <?php if($contact) { ?>
+                    <?php foreach($contact as $item) { ?>
+                        <div class="contact__wrap">
+                            <div class="icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.3637 3.27273H8.72734L10.9092 8.72727L8.18188 10.3636C9.3502 12.7326 11.2675 14.6499 13.6364 15.8182L15.2728 13.0909L20.7273 15.2727V19.6364C20.7273 20.215 20.4975 20.77 20.0883 21.1791C19.6791 21.5883 19.1242 21.8182 18.5455 21.8182C14.2902 21.5596 10.2766 19.7525 7.26206 16.738C4.24753 13.7235 2.44048 9.70989 2.18188 5.45455C2.18188 4.87589 2.41175 4.32094 2.82092 3.91177C3.23009 3.5026 3.78505 3.27273 4.3637 3.27273Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <a href="tel:<?= $item['social_link'] ?>" class="contact__phone"><?= $item['social_text'] ?></a>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
                 <div class="contact__wrap">
                     <div class="icon-wrap">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +37,7 @@ Template Name: Contact
                         <path d="M4.3637 3.27273H8.72734L10.9092 8.72727L8.18188 10.3636C9.3502 12.7326 11.2675 14.6499 13.6364 15.8182L15.2728 13.0909L20.7273 15.2727V19.6364C20.7273 20.215 20.4975 20.77 20.0883 21.1791C19.6791 21.5883 19.1242 21.8182 18.5455 21.8182C14.2902 21.5596 10.2766 19.7525 7.26206 16.738C4.24753 13.7235 2.44048 9.70989 2.18188 5.45455C2.18188 4.87589 2.41175 4.32094 2.82092 3.91177C3.23009 3.5026 3.78505 3.27273 4.3637 3.27273Z" fill="white"/>
                         </svg>
                     </div>
-                    <a href="tel:380932855827" class="contact__phone">+38 (093) 285-58-27</a>
+                    <a href="tel:380932855827" class="contact__phone"><?= tof('text'); ?>+38 (093) 285-58-27</a>
                 </div>
                 <div class="contact__wrap">
                     <div class="icon-wrap">
