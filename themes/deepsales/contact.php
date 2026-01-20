@@ -10,95 +10,58 @@ Template Name: Contact
         <h1 class="title title__contact-page"><?php echo the_title(); ?></h1>
         <div class="contact__items">
             <div class="contact__item">
-                <?php $contact = tof('contact'); ?>
-                <?php if($contact) { ?>
-                    <?php foreach($contact as $item) { ?>
+                <div class="contact__wrap">
+                    <div class="icon-wrap">
+                        <?= file_get_contents(get_attached_file(tof('social_icon'))); ?>
+                    </div>
+                    <a href="tel:<?= tof('phone_link'); ?>" class="contact__phone"><?= tof('phone_text'); ?></a>
+                </div>
+                <?php $phone_numbers = tof('phone_numbers'); ?>
+                <?php if($phone_numbers) { ?>
+                    <?php foreach($phone_numbers as $item) { ?>
                         <div class="contact__wrap">
                             <div class="icon-wrap">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.3637 3.27273H8.72734L10.9092 8.72727L8.18188 10.3636C9.3502 12.7326 11.2675 14.6499 13.6364 15.8182L15.2728 13.0909L20.7273 15.2727V19.6364C20.7273 20.215 20.4975 20.77 20.0883 21.1791C19.6791 21.5883 19.1242 21.8182 18.5455 21.8182C14.2902 21.5596 10.2766 19.7525 7.26206 16.738C4.24753 13.7235 2.44048 9.70989 2.18188 5.45455C2.18188 4.87589 2.41175 4.32094 2.82092 3.91177C3.23009 3.5026 3.78505 3.27273 4.3637 3.27273Z" fill="white"/>
-                                </svg>
+                                <?= file_get_contents(get_attached_file($item['phone_icon'])); ?>
                             </div>
-                            <a href="tel:<?= $item['social_link'] ?>" class="contact__phone"><?= $item['social_text'] ?></a>
+                            <a href="tel:<?= $item['phone_link'] ?>" class="contact__phone"><?= $item['phone_number'] ?></a>
                         </div>
                     <?php } ?>
                 <?php } ?>
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.3637 3.27273H8.72734L10.9092 8.72727L8.18188 10.3636C9.3502 12.7326 11.2675 14.6499 13.6364 15.8182L15.2728 13.0909L20.7273 15.2727V19.6364C20.7273 20.215 20.4975 20.77 20.0883 21.1791C19.6791 21.5883 19.1242 21.8182 18.5455 21.8182C14.2902 21.5596 10.2766 19.7525 7.26206 16.738C4.24753 13.7235 2.44048 9.70989 2.18188 5.45455C2.18188 4.87589 2.41175 4.32094 2.82092 3.91177C3.23009 3.5026 3.78505 3.27273 4.3637 3.27273Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <a href="tel:380932855827" class="contact__phone">+38 (093) 285-58-27</a>
-                </div>
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.3637 3.27273H8.72734L10.9092 8.72727L8.18188 10.3636C9.3502 12.7326 11.2675 14.6499 13.6364 15.8182L15.2728 13.0909L20.7273 15.2727V19.6364C20.7273 20.215 20.4975 20.77 20.0883 21.1791C19.6791 21.5883 19.1242 21.8182 18.5455 21.8182C14.2902 21.5596 10.2766 19.7525 7.26206 16.738C4.24753 13.7235 2.44048 9.70989 2.18188 5.45455C2.18188 4.87589 2.41175 4.32094 2.82092 3.91177C3.23009 3.5026 3.78505 3.27273 4.3637 3.27273Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <a href="tel:380932855827" class="contact__phone"><?= tof('text'); ?>+38 (093) 285-58-27</a>
-                </div>
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.6364 4.36364H4.3637C3.15872 4.36364 2.18188 5.34047 2.18188 6.54545V17.4545C2.18188 18.6595 3.15872 19.6364 4.3637 19.6364H19.6364C20.8414 19.6364 21.8182 18.6595 21.8182 17.4545V6.54545C21.8182 5.34047 20.8414 4.36364 19.6364 4.36364Z" fill="white"/>
-                        <path d="M2.18188 6.54546L12.0001 13.0909L21.8182 6.54546" stroke="#122F3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <a href="mailto:info@deepsales.com.ua" class="contact__email">info@deepsales.com.ua</a>
-                </div>
+                <?php $emails = tof('emails'); ?>
+                <?php if($emails) { ?>
+                    <?php foreach($emails as $item) { ?>
+                        <div class="contact__wrap">
+                            <div class="icon-wrap">
+                                <?= file_get_contents(get_attached_file($item['email_icon'])); ?>
+                            </div>
+                            <a href="tel:<?= $item['email_link'] ?>" class="contact__email"><?= $item['email'] ?></a>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
             </div>
             <div class="contact__item">
                 <div class="image-wrap">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact-img.webp" alt="Євгеній Попсуй" class="contact__img">
+                    <img src="<?= f('photo'); ?>" alt="Євгеній Попсуй" class="contact__img">
                 </div>
-                <div class="contact__name">Євгеній Попсуй</div>
-                <span class="contact__skills">Експерт з продажів B2B/B2C</span>
+                <div class="contact__name"><?= f('name'); ?></div>
+                <span class="contact__skills"><?= f('position'); ?></span>
             </div>
             <div class="contact__item">
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_7382_8260)">
-                        <path d="M23.9766 7.05607C23.9203 5.78085 23.7141 4.90416 23.4187 4.14449C23.114 3.33812 22.6451 2.61617 22.0309 2.01602C21.4307 1.40652 20.704 0.932921 19.907 0.632936C19.1429 0.337529 18.2708 0.131312 16.9956 0.0750879C15.7109 0.0141019 15.303 0 12.0446 0C8.78611 0 8.37826 0.0141019 7.09829 0.0703262C5.82308 0.126551 4.94638 0.332951 4.1869 0.628174C3.38035 0.932922 2.6584 1.40176 2.05825 2.01602C1.44876 2.61617 0.975339 3.34288 0.675171 4.13991C0.379765 4.90416 0.173548 5.77609 0.117324 7.0513C0.0563382 8.33604 0.0422363 8.7439 0.0422363 12.0023C0.0422363 15.2608 0.0563382 15.6686 0.112562 16.9486C0.168787 18.2238 0.375186 19.1005 0.670593 19.8602C0.975339 20.6666 1.44876 21.3885 2.05825 21.9887C2.6584 22.5982 3.38511 23.0718 4.18214 23.3718C4.94638 23.6672 5.81832 23.8734 7.09371 23.9296C8.3735 23.986 8.78154 23.9999 12.04 23.9999C15.2984 23.9999 15.7063 23.986 16.9862 23.9296C18.2615 23.8734 19.1382 23.6672 19.8976 23.3718C21.5106 22.7482 22.7858 21.4729 23.4094 19.8602C23.7046 19.096 23.911 18.2238 23.9672 16.9486C24.0234 15.6686 24.0375 15.2608 24.0375 12.0023C24.0375 8.7439 24.0328 8.33604 23.9766 7.05607ZM21.8153 16.8549C21.7637 18.027 21.5668 18.6599 21.4027 19.0819C20.9994 20.1274 20.1696 20.9572 19.1241 21.3605C18.7021 21.5246 18.0646 21.7215 16.8971 21.7729C15.6312 21.8293 15.2515 21.8433 12.0493 21.8433C8.8471 21.8433 8.46269 21.8293 7.2014 21.7729C6.02929 21.7215 5.39636 21.5246 4.9744 21.3605C4.4541 21.1682 3.9805 20.8634 3.59609 20.4649C3.19757 20.0758 2.89282 19.6069 2.70053 19.0866C2.53643 18.6647 2.33956 18.027 2.28809 16.8596C2.23169 15.5937 2.21777 15.2139 2.21777 12.0117C2.21777 8.80946 2.23169 8.42505 2.28809 7.16394C2.33956 5.99183 2.53643 5.3589 2.70053 4.93694C2.89282 4.41645 3.19757 3.94303 3.60085 3.55843C3.98984 3.15992 4.45868 2.85517 4.97917 2.66306C5.40112 2.49896 6.03882 2.30209 7.20616 2.25044C8.47203 2.19422 8.85186 2.18011 12.0539 2.18011C15.2609 2.18011 15.6405 2.19422 16.9018 2.25044C18.0739 2.30209 18.7069 2.49896 19.1288 2.66306C19.6491 2.85517 20.1227 3.15992 20.5071 3.55843C20.9056 3.94761 21.2104 4.41645 21.4027 4.93694C21.5668 5.3589 21.7637 5.99641 21.8153 7.16394C21.8715 8.42981 21.8856 8.80946 21.8856 12.0117C21.8856 15.2139 21.8715 15.589 21.8153 16.8549Z" fill="white"/>
-                        <path d="M12.0447 5.83705C8.64098 5.83705 5.87939 8.59846 5.87939 12.0023C5.87939 15.4062 8.64098 18.1676 12.0447 18.1676C15.4485 18.1676 18.2099 15.4062 18.2099 12.0023C18.2099 8.59846 15.4485 5.83705 12.0447 5.83705ZM12.0447 16.0016C9.83653 16.0016 8.04541 14.2106 8.04541 12.0023C8.04541 9.794 9.83653 8.00306 12.0447 8.00306C14.253 8.00306 16.0439 9.794 16.0439 12.0023C16.0439 14.2106 14.253 16.0016 12.0447 16.0016Z" fill="white"/>
-                        <path d="M19.893 5.59331C19.893 6.38815 19.2485 7.03262 18.4535 7.03262C17.6586 7.03262 17.0142 6.38815 17.0142 5.59331C17.0142 4.79829 17.6586 4.154 18.4535 4.154C19.2485 4.154 19.893 4.79829 19.893 5.59331Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_7382_8260">
-                        <rect width="24" height="24" fill="white"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
-                    </div>
-                    <a href="" class="social">
-                        <span class="social__name">Instagram</span>
-                        <span class="social__link">@yevheniipopsui</span>
-                    </a>
-                </div>
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.41693 13.1814L18.3099 19.7244C19.3219 20.2884 20.0349 19.9914 20.3079 18.7934L23.9299 1.82141L23.9309 1.82041C24.2519 0.324405 23.3899 -0.260595 22.4039 0.106406L1.11393 8.25741C-0.339066 8.82141 -0.317066 9.63141 0.866934 9.99841L6.30993 11.6914L18.9529 3.78041C19.5479 3.38641 20.0889 3.60441 19.6439 3.99841L9.41693 13.1814Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <a href="" class="social">
-                        <span class="social__name">Telegram</span>
-                        <span class="social__link">@yevheniipopsui</span>
-                    </a>
-                </div>
-                <div class="contact__wrap">
-                    <div class="icon-wrap">
-                        <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9998 3.65184L9.82467 3.65276C8.11926 3.65276 7.78909 4.42437 7.78909 5.55676V8.05358H11.8564L11.855 11.9645H7.78909V22H3.54672V11.9645H0V8.05358H3.54672V5.16969C3.54672 1.82261 5.6942 0 8.83029 0L12 0.00480115L11.9998 3.65184Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <a href="" class="social">
-                        <span class="social__name">Facebook</span>
-                        <span class="social__link">@yevheniipopsui</span>
-                    </a>
-                </div>
+                <?php $social_data = tof('social_data'); ?>
+                <?php if($social_data) { ?>
+                        <?php foreach($social_data as $item) { ?>
+                            <div class="contact__wrap">
+                                <div class="icon-wrap">
+                                    <?= file_get_contents(get_attached_file($item['social_icon'])); ?>
+                                </div>
+                                <a href="<?= $item['social_link'] ?>" class="social">
+                                    <span class="social__name"><?= $item['social_text'] ?></span>
+                                    <span class="social__link"><?= $item['social_text_link'] ?></span>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
+                
             </div>
         </div>
         <div class="contact-form">
