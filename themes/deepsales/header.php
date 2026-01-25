@@ -15,9 +15,7 @@
     <header class="header">
         <div class="wrapper">
             <div class="header-wrap">
-                <a href="/" class="logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg" alt="Logo Deepsales" class="header-logo">
-                </a>
+                <?php echo get_custom_logo(); ?>
                 <nav class="nav">
                     <ul class="menu">
                         <?php if ( $menu_items = wp_get_nav_menu_items('Main Menu ua') ) {
@@ -51,7 +49,7 @@
                     </svg>
                     <a href="tel:<?= tof('phone_link'); ?>" class="header-phone__link"><?= tof('phone_text'); ?></a>
                 </div>
-                <button class="header__button">Мій кабінет</button>
+                <button class="header__button"><?= tof('header_btn'); ?></button>
             </div>
         </div>
     </header>

@@ -4,6 +4,15 @@ add_theme_support( 'title-tag' );
 
 add_theme_support( 'custom-logo' );
 
+function add_custom_logo_classes( $html ) {
+    // Удаляем существующие классы, если нужно, или добавляем новые
+    $html = str_replace( 'class="custom-logo-link"', 'class="logo-link"', $html );
+    $html = str_replace( 'class="custom-logo header-logo"', 'class="header-logo"', $html );
+    return $html;
+}
+add_filter( 'get_custom_logo', 'add_custom_logo_classes' );
+
+
 add_theme_support('menus');
 
 add_theme_support( 'html5', array( 'search-form' ) );

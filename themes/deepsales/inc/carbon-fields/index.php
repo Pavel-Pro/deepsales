@@ -1,8 +1,7 @@
 <?php
 
 require_once __DIR__ . '/theme-options.php';
-require_once __DIR__ . '/home-page.php';
-require_once __DIR__ . '/kurs-page.php';
+require_once __DIR__ . '/flexible-content.php';
 require_once __DIR__ . '/contact.php';
 
 function f($field) {

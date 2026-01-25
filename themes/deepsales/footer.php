@@ -2,9 +2,7 @@
         <footer class="footer">
             <div class="wrapper">
                 <div class="footer-top">
-                    <a href="/" class="footer-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/header-logo.svg" alt="Logo Deepsales" class="header-logo">
-                    </a>
+                    <?php echo get_custom_logo(); ?>
                     <nav class="nav footer-nav">
                         <ul class="footer-menu">
                             <?php if ( $menu_items = wp_get_nav_menu_items('Main Menu ua') ) {
@@ -23,12 +21,12 @@
                         <?= file_get_contents(get_attached_file(tof('social_icon'))); ?>
                         <a href="tel:<?= tof('phone_link'); ?>" class="header-phone__link"><?= tof('phone_text'); ?></a>
                     </div>
-                    <button class="header__button footer__button">Замовити дзвінок</button>
+                    <button class="header__button footer__button"><?= tof('footer_btn'); ?></button>
                 </div>
                 <div class="footer__bottom">
-                    <span class="copy">Deepsales © 2025. Усі права захищені.</span>
-                    <a href="/public-offer" class="policy__link">Публічна оферта</a>
-                    <a href="/privacy-policy" class="policy__link">Політика конфіденційності</a>
+                    <span class="copy"><?= str_replace('####', date('Y'), tof('copy')) ?></span>
+                    <a href="/public-offer" class="policy__link"><?= tof('offer_text'); ?></a>
+                    <a href="/privacy-policy" class="policy__link"><?= tof('policy_text')?></a>
                 </div>
             </div>
             <?php if ( !array_key_exists('cookieAgree', $_COOKIE) ) {
@@ -51,7 +49,6 @@
                         </div>
                     HTML;
                 } ?>
-
             <div class="callback-form">
                 <div class="form__background"></div>
                     <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
