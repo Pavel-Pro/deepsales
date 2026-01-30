@@ -212,7 +212,8 @@
     background: var(--white);
     border-radius: 10px;
     border: 2px solid var(--white);
-    padding-left: 0;
+    padding: 0;
+    text-align: left;
 }
 .solution__item:first-child 
 .solution-list__item:last-child:after {
@@ -236,6 +237,8 @@
 .solution-sublist__item {
     padding-left: 34px;
     position: relative;
+    font-size: 16px;
+    font-family: "Montserrat Regular";
 }
 .solution-sublist__item:after {
     content: "";
@@ -249,7 +252,7 @@
 .solution-sublist__item + .solution-sublist__item {
     margin-top: 22px;
 }
-.solution-list__message {
+.solution-list__item:last-child {
     background: var(--white);
     text-align: center;
     border-radius: 10px;
@@ -257,6 +260,9 @@
     font-family: var(--middle-f-f);
     font-size: var(--middle-s);
     margin-top: 15px;
+}
+.solution-list__item:last-child:after {
+    display: none;
 }
 /* end section solution */
 /* start section effect */
@@ -425,6 +431,7 @@
     justify-content: flex-start;
     gap: 30px;
     position: relative;
+    min-height: 400px;
 }
 .about__item_title {
     color: var(--black-navy);
@@ -443,7 +450,7 @@
 }
 .about-list__item {
     padding-left: 54px;
-    height: 46px;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -462,7 +469,7 @@
     background: url(../img/icon/arrow-yellow.svg)center left / 44px no-repeat;
 }
 .about-list__item + .about-list__item {
-    margin-top: 16px;
+    margin-top: 20px;
 }
 .about__img {
     position: absolute;
@@ -1007,9 +1014,9 @@ label > span {
         font-size: 24px;
     }
     .about__img {
-        left: 60%;
+        left: 63%;
         transform: translateY(50px);
-        width: auto;
+        width: 350px;
     }
     .about__top__text {
         flex-basis: 35%;
@@ -1110,6 +1117,9 @@ label > span {
         flex-basis: 70%;
         font-size: 16px;
     }
+    .about__items {
+        gap: 14px;
+    }
     .about__item {
         flex-basis: 33%;
     }
@@ -1126,8 +1136,9 @@ label > span {
         background: url(../img/icon/arrow-yellow.svg) center left / 18px no-repeat;
     }
     .about__img {
-        left: 68%;
+        left: 67%;
         transform: translateY(50px);
+        width: auto;
     }
     .testimonials__position {
         font-size: 14px;
@@ -1253,8 +1264,9 @@ label > span {
         height: auto;
     }
     .about__img {
-        left: 59%;
-        transform: translateY(50px);
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 14px);
     }
     .consultation .wpcf7 {
         margin-top: 30px;
@@ -1366,12 +1378,6 @@ label > span {
     .subtitle__solution_item {
         font-size: 14px;
     }
-    .solution-list__message {
-        border-radius: 7px;
-        padding: 12px 8px;
-        font-size: 16px;
-        margin-top: 15px;
-    }
     .steps {
         display: none;
     }
@@ -1426,11 +1432,6 @@ label > span {
     }
     .about-list {
         margin-top: 16px;
-    }
-    .about__img {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 14px);
     }
     .testimonials__slider {
         margin-top: 30px;

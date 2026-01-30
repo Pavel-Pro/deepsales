@@ -75,4 +75,16 @@
         });
 
 
+
+        function showToTop() {
+            ($(window).scrollTop() > 500) ? $('.totop').css('opacity', '1') : $('.totop').css('opacity', '0'); 
+        }
+
+        $('.totop').on('click', function() {
+            $(window).scrollTop(0).animate(500);
+        });
+
+        $(window).scroll( function(){ showToTop(); } );
+        showToTop();
+
     }(jQuery));

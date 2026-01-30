@@ -80,5 +80,25 @@ Container::make( 'theme_options', __( 'Theme Options' ) )
             ->set_width(50),
         Field::make( 'text', 'footer_btn', __( 'Текст кнопки в подвале сайта' ) )
             ->set_width(50),
+    ) )
+    ->add_tab(  __( '404 Страница' ), array(
+        Field::make( 'text', 'title', __( 'Заголовок' ) )
+            ->set_width(30),
+        Field::make( 'text', 'number', __( 'Номер ошибки' ) )
+            ->set_width(10),
+        Field::make( 'text', 'mistake_text', __( 'Текст под номером ошибки'))
+            ->set_width(30),
+        Field::make( 'text', 'mistake_btn', __( 'Название кнопки' ) )
+            ->set_width(30),
+    ) )
+    ->add_tab(  __( 'Блок Cookie' ), array(
+        Field::make( 'text', 'cookie_title', __( 'Заголовок' ) )
+            ->set_width(30),
+        Field::make( 'rich_text', 'cookie_text', __( 'Текст блока' ) )
+            ->set_width(70),
+        Field::make( 'text', 'cookie_btn1', __( 'Название первой кнопки' ) )
+            ->set_width(50),
+        Field::make( 'text', 'cookie_btn2', __( 'Название второй кнопки' ) )
+            ->set_width(50),
     ) );
 }

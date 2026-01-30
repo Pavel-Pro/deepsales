@@ -29,30 +29,37 @@
                     <a href="/privacy-policy" class="policy__link"><?= tof('policy_text')?></a>
                 </div>
             </div>
-            <?php if ( !array_key_exists('cookieAgree', $_COOKIE) ) {
-                    echo <<<HTML
-                        <div class="cookie">
-                            <div class="wrapper">
-                                <div class="cookie__items">
-                                    <div class="cookie__item">
-                                        <h5 class="title title__cookie">Ми використовуємо файли cookie</h5>
-                                        <p class="cookie__text">
-                                            Цей вебсайт використовує файли cookie для покращення вашого досвіду, аналізу трафіку та персоналізації контенту. Продовжуючи користуватися сайтом, ви погоджуєтесь на використання файлів cookie відповідно до Політики конфіденційності.
-                                        </p>
-                                    </div>
-                                    <div class="cookie__item">
-                                        <button class="button button__cookie">Прийняти</button>
-                                        <button class="button button__cookie">Відхилити</button>
-                                    </div>
-                                </div>
+            <?php if ( !array_key_exists('cookieAgree', $_COOKIE) ) { ?>
+                <div class="cookie">
+                    <div class="wrapper">
+                        <div class="cookie__items">
+                            <div class="cookie__item">
+                                <h5 class="title title__cookie">
+                                    <?= tof('cookie_title'); ?>
+                                </h5>
+                                <p class="cookie__text"><?= tof('cookie_text'); ?></p>
+                            </div>
+                            <div class="cookie__item">
+                                <button class="button button__cookie">
+                                    <?= tof('cookie_btn1'); ?>
+                                </button>
+                                <button class="button button__cookie">
+                                    <?= tof('cookie_btn2') ?>
+                                </button>
                             </div>
                         </div>
-                    HTML;
-                } ?>
+                    </div>
+                </div>
+            <?php } ?>
             <div class="callback-form">
                 <div class="form__background"></div>
                     <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
             </div>
+            <button class="totop">
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.883789 10.4949L9.61106 1.76758L18.3383 10.4949" stroke="white" stroke-width="2.5"/>
+                </svg>
+            </button>
         </footer>    
     <?php wp_footer(); ?>
 </body>

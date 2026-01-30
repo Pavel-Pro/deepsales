@@ -1,112 +1,7 @@
 <?php get_header(); ?>
     <?php  require __DIR__ . '/parts/hero.php'; ?>
     <?php  require __DIR__ . '/parts/problems.php'; ?>
-    <section class="solution">
-        <div class="wrapper">
-            <h2 class="title title__solution"><?= f('problem_title'); ?></h1>
-            <div class="solution__items">
-                <div class="solution__item">
-                    <div class="solution__item_top">
-                        <span class="solution__stage"><?= f('stage1'); ?></span>
-                        <h4 class="solution__item_title"><?= f('title_block1'); ?></h4>
-                    </div>
-                    <ul class="solution-list">
-                        <li class="solution-list__item">
-                            Зустріч із керівництвом/власником: обговорюємо цілі, контекст, обмеження, очікування
-                        </li>
-                        <li class="solution-list__item">
-                            За запитом на аудит, робимо перевірку чинної методики продажів (підходи, сценарії, правила)
-                        </li>
-                        <li class="solution-list__item">
-                            Аналіз воронки та CRM: етапи, правила переходів, час у статусах, задачі, «наступні дії»
-                        </li>
-                        <li class="solution-list__item">
-                            Перевірка скриптів і шаблонів (дзвінки/листи/месенджери)
-                        </li>
-                        <li class="solution-list__item">
-                            Вивчення клієнта: ICP/Buyer Persona, сегменти, ключові тригери
-                        </li>
-                        <li class="solution-list__item">
-                            Прослуховування дзвінків (за наявності), перевірка листування
-                        </li>
-                        <li class="solution-list__item">
-                            Огляд звітності й підходу до KPI/планування
-                        </li>
-                        <li class="solution-list__item">
-                            <span class="solution-sublist__title">На виході</span>
-                            <ul class="solution-sublist">
-                                <li class="solution-sublist__item">
-                                    Маємо карту вузьких місць і втрат
-                                </li>
-                                <li class="solution-sublist__item">
-                                    Дорожня карта змін із пріоритетами
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="solution__item">
-                    <div class="solution__item_top">
-                        <span class="solution__stage">Етап 2</span>
-                        <h4 class="solution__item_title">Стратегія</h4>
-                        <span class="subtitle subtitle__solution_item">
-                            На основі запиту або аудиту формуємо план робіт, узгоджений із задачами власника або керівника.
-                        </span>
-                    </div>
-                    <ul class="solution-list">
-                        <li class="solution-list__item">
-                            Будуємо послідовність змін, виходячи з аудиту і задач власника або керівника
-                        </li>
-                        <li class="solution-list__item">
-                            Визначаємо зону фокусу: точкові зміни чи повна перебудова
-                        </li>
-                        <li class="solution-list__item">
-                            Визначаємо потрібні ресурси й інструменти (CRM/телефонія/ролі)
-                        </li>
-                        <li class="solution-list__item">
-                            Плануємо перші кроки
-                        </li>
-                    </ul>
-                </div>
-                <div class="solution__item">
-                    <div class="solution__item_top">
-                        <span class="solution__stage">Етап 3</span>
-                        <h4 class="solution__item_title">Впровадження та запуск</h4>
-                        <span class="subtitle subtitle__solution_item">
-                            Що робимо на етапі виконання:
-                        </span>
-                    </div>
-                    <ul class="solution-list">
-                        <li class="solution-list__item">
-                            Визначаємо потрібні ресурси й інструменти (CRM/телефонія/ролі)
-                        </li>
-                        <li class="solution-list__item">
-                            Створюємо/оновлюємо сценарії та скрипти дзвінків, шаблони листів, відповіді на заперечення
-                        </li>
-                        <li class="solution-list__item">
-                            Визначаємо критерії та процес оцінки якості дзвінків (QA), запускаємо регулярні розбори
-                        </li>
-                        <li class="solution-list__item">
-                            Навчаємо команду, запускаємо ритм-менеджмент (щоденні/щотижневі цикли, контроль KPI)
-                        </li>
-                        <li class="solution-list__item">
-                            Проектуємо/налаштовуємо воронку в CRM: етапи, правила переходів, картка угоди, «наступні дії»
-                        </li>
-                        <li class="solution-list__item">
-                            Готуємо Sales Playbook (плейбук): правила, скрипти, шаблони, чек-листи, стандарти роботи в CRM
-                        </li>
-                        <li class="solution-list__item">
-                            Досліджуємо клієнта глибше, проводимо Cusdev інтерв'ю, сегментуємо, формуємо ICP та ціннісні пропозиції під сегменти
-                        </li>
-                        <li class="solution-list__message">
-                            Перші ітерації, швидкі виправлення за результатами запуску
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <button class="button solution__button callform">Почати з діагностики</button>
-        </div>  
-    </section>
+    
     <section class="effect">
         <div class="wrapper">
             <h2 class="title title__effect">Що отримаєте після впровадження</h2>
@@ -175,12 +70,5 @@
     </section>
     <?php  require __DIR__ . '/parts/about.php'; ?>
     <?php  require __DIR__ . '/parts/testimonials.php'; ?>
-    <section class="consultation">
-        <div class="wrapper">
-            <h2 class="title title__consultation">Замовити безкоштовну консультацію</h2>
-            <span class="subtitle consultation__subtitle">Протягом 24 годин зв'яжуся з вами для узгодження зручного часу</span>
-            <?php echo do_shortcode('[contact-form-7 id="a71b06d" title="Consultation form"]')?>
-        </div>
-    </section>
 
 <?php get_footer(); ?>

@@ -85,6 +85,10 @@ button:hover,
     color: var(--yellow);
     border: 2px solid var(--yellow);
 }
+button:focus, button:active {
+    outline: none;
+    border: 2px solid var(--yellow);
+}
 .header {
     position: absolute;
     top: 0;
@@ -250,7 +254,7 @@ section {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 22;
+    z-index: 35;
     width: 100%;
     background: var(--white);
     border-top: 4px solid rgb(14, 116, 144);
@@ -304,6 +308,33 @@ h5.title {
     border: 1px solid transparent;
 }
 /* end cookie section */
+/* start totop button */
+.totop {
+    position: fixed;
+    opacity: 1;
+    bottom: 15%;
+    right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--black-navy);
+    border: 1px solid var(--blue);
+    width: 50px;
+    height: 40px;
+    z-index: 28;
+    padding: 0;
+    margin: 0;
+}
+.totop:hover {
+    background: rgb(56, 158, 186);
+    color: var(--yellow);
+    border: 1px solid var(--blue);
+}
+.totop:focus, .totop:active {
+    border: 1px solid var(--blue);
+}
+/* end totop button */
 @media screen and (max-width: 1300px) {
     .wrapper {
         padding: 0 30px;
@@ -611,6 +642,13 @@ h5.title {
     }
     .title__error-page {
         font-size: 120px;
+    }
+    .totop {
+        width: 40px;
+        height: 30px;
+    }
+    .totop  svg {
+        width: 15px;
     }
 }
 @media screen and (max-width: 375px) {
