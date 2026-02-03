@@ -1,4 +1,4 @@
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="wrapper">
             <h2 class="title title__testimonials"><?= $s['testimonials__title'] ?></h2>
             <div class="testimonials__slider swiper">
@@ -8,7 +8,7 @@
                         <?php foreach($testimonials as $item) { ?>
                             <div class="testimonials__slide swiper-slide">
                                 <div class="testimonials-how">
-                                    <img src="<?= wp_get_attachment_image_url($item['photo']) ?>" alt="" class="testimonials__img">
+                                    <img src="<?= wp_get_attachment_image_url($item['photo']) ?>" alt="<?= get_post_meta( $item['photo'], '_wp_attachment_image_alt', true ); ?>" class="testimonials__img">
                                     <div class="testimonials__person">
                                         <h5 class="testimonials__name">
                                             <?= $item['name'] ?>

@@ -1,4 +1,4 @@
-    <section class="problem">
+    <section class="problem" id="problem">
         <div class="wrapper">
             <h2 class="title title__problem"><?= $s['problem_title'] ?></h1>
             <span class="subtitle subtitle__problem"><?= $s['problem_text'] ?></span>

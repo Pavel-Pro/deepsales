@@ -41,7 +41,8 @@ Template Name: Contact
             </div>
             <div class="contact__item">
                 <div class="image-wrap">
-                    <img src="<?= f('photo'); ?>" alt="Євгеній Попсуй" class="contact__img">
+                    <?php $imageId = attachment_url_to_postid(f('photo'))?>
+                    <img src="<?= f('photo'); ?>" alt="<?= get_post_meta( $imageId, '_wp_attachment_image_alt', true ); ?>" class="contact__img">
                 </div>
                 <div class="contact__name"><?= f('name'); ?></div>
                 <span class="contact__skills"><?= f('position'); ?></span>

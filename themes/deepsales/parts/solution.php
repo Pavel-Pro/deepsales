@@ -1,4 +1,4 @@
-<section class="solution">
+<section class="solution" id="solution">
         <div class="wrapper">
             <h2 class="title title__solution"><?= $s['solution__title'] ?></h1>
             <div class="solution__items">

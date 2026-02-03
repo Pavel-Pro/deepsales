@@ -10,7 +10,7 @@
                     <picture>
                         <source srcset="<?= wp_get_attachment_image_url($s['hero_imag-mob']); ?>" media="(max-width: 768px)">
                         <source srcset="<?= wp_get_attachment_image_url($s['hero_imag-tab']); ?>" media="(max-width: 1024px)">
-                        <img src="<?= wp_get_attachment_image_url($s['hero_image']); ?>" alt="Євгеній Попсуй" class="hero-img" fetchpriority="high">
+                        <img src="<?= wp_get_attachment_image_url($s['hero_image']); ?>" alt="<?= get_post_meta( $s['hero_image'], '_wp_attachment_image_alt', true ); ?>" class="hero-img" fetchpriority="high">
                     </picture>
                     <div class="hero-elips hero-elips__big"></div>
                     <div class="hero-elips hero-elips__small"></div>

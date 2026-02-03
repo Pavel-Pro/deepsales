@@ -348,6 +348,13 @@ h5.title {
     .subtitle {
         font-size: var(--middle-s);
     }
+    .phone-wrap svg {
+        width: 17px;
+    }
+    .header-phone__link {
+        font-size: 15px;
+        margin-left: 10px;
+    }
 }
 @media screen and (max-width: 1024px) {
     .title {

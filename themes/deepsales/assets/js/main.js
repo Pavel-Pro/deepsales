@@ -2,7 +2,7 @@
 
         'use strict';
 
-        $('.burger').on('click', function() {
+        $('.burger, .menu__link').on('click', function() {
             $('.burger__item:first-child').toggleClass('burger__item_top');
             $('.burger__item:nth-child(2n)').toggleClass('burger__item_middle');
             $('.burger__item:last-child').toggleClass('burger__item_bottom');

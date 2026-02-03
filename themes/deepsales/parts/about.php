@@ -1,4 +1,4 @@
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <div class="about__top">
                 <h2 class="title title__about"><?= $s['about__title'] ?></h2>
@@ -34,7 +34,7 @@
                 <picture>
                     <source srcset="<?= wp_get_attachment_image_url($s['about_imag-mob']) ?>" media="(max-width: 1024px)">
                     <source srcset="<?= wp_get_attachment_image_url($s['about_imag-tab']) ?>" media="(max-width: 1300px)">
-                    <img src="<?= wp_get_attachment_image_url($s['about_image']) ?>" alt="Євгеній Попсуй" class="about__img" fetchpriority="low" loading="lazy">
+                    <img src="<?= wp_get_attachment_image_url($s['about_image']) ?>" alt="<?= get_post_meta( $s['about_image'], '_wp_attachment_image_alt', true ); ?>" class="about__img" fetchpriority="low" loading="lazy">
                 </picture>
             </div>
         </div>
