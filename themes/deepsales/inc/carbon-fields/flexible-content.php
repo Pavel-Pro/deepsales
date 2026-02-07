@@ -25,6 +25,16 @@ add_action( 'carbon_fields_register_fields', function() {
                         ->set_help_text( 'Изображение для мобильной версии разрешение 220х302.' )
                         ->set_width(30),
                 ] )
+                ->add_fields( 'kursfor', 'Секция "Для кого это:"', [
+                    Field::make( 'text', 'kursfor_title', __( 'Заголовок' )),
+                    Field::make( 'complex', 'kursfor_block', __( 'Перечень должностей кому это будет интересно' ) )
+                        ->set_layout('tabbed-horizontal')
+                        ->set_width(50)
+                        ->add_fields( 'kursfor_list', '', [
+                            Field::make( 'text', 'kursfor_position', __( 'Должность интересанта' )),
+                        ]),
+                    Field::make( 'text', 'kursfor__text', __( 'Текст внизу секции' ))
+                ] )
                 ->add_fields( 'problem', 'Секция "Проблемы отдела"', [
                     Field::make( 'text', 'problem_title', __( 'Заголовок' )),
                     Field::make( 'text', 'problem_text', __( 'Подзаголовок' )),
@@ -84,6 +94,9 @@ add_action( 'carbon_fields_register_fields', function() {
                             Field::make( 'text', 'solution_etap3_item', __( 'Этап диагностики' )),
                         ]),
                     Field::make( 'text', 'solution__btn', __( 'Название кнопки' ))
+                ] )
+                ->add_fields( 'lessons', 'Секция "Секция "5 Уроков""', [
+                    Field::make( 'text', 'lessons__title', __( 'Заголовок' )),
                 ] )
                 ->add_fields( 'effect', 'Секция "Эффект от внедрения"', [
                     Field::make( 'text', 'effect__title', __( 'Заголовок' )),
