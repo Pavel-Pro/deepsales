@@ -95,8 +95,11 @@ add_action( 'carbon_fields_register_fields', function() {
                         ]),
                     Field::make( 'text', 'solution__btn', __( 'Название кнопки' ))
                 ] )
-                ->add_fields( 'lessons', 'Секция "Секция "5 Уроков""', [
+                ->add_fields( 'lessons', 'Секция "5 Уроков"', [
                     Field::make( 'text', 'lessons__title', __( 'Заголовок' )),
+                ] )
+                ->add_fields( 'package', 'Секция c пакетами обучения"', [
+                    Field::make( 'text', 'package__title', __( 'Заголовок' )),
                 ] )
                 ->add_fields( 'effect', 'Секция "Эффект от внедрения"', [
                     Field::make( 'text', 'effect__title', __( 'Заголовок' )),
@@ -164,9 +167,15 @@ add_action( 'carbon_fields_register_fields', function() {
                             Field::make( 'rich_text', 'text', __( 'Текст отзыва' )),
                         ]),
                 ] )
+                ->add_fields( 'faq', 'Секция Вопросы ответ', [
+                    Field::make( 'text', 'faq__title', __( 'Заголовок' )),
+                ] )
                 ->add_fields( 'form', 'Секция "Форма запроса консультации"', [
                     Field::make( 'text', 'form__title', __( 'Заголовок' )),
                     Field::make( 'text', 'form__undertitle', __( 'Подзаголовок' ))
+                ] )
+                ->add_fields( 'important', 'Секция "Важно!"', [
+                    Field::make( 'text', 'important__title', __( 'Заголовок' )),
                 ] )
         ] );
 

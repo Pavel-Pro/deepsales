@@ -21,7 +21,7 @@
                         <?= file_get_contents(get_attached_file(tof('social_icon'))); ?>
                         <a href="tel:<?= tof('phone_link'); ?>" class="header-phone__link"><?= tof('phone_text'); ?></a>
                     </div>
-                    <button class="header__button footer__button"><?= tof('footer_btn'); ?></button>
+                    <button class="header__button footer__button callform"><?= tof('footer_btn'); ?></button>
                 </div>
                 <div class="footer__bottom">
                     <span class="copy"><?= str_replace('####', date('Y'), tof('copy')) ?></span>

@@ -152,19 +152,18 @@ button:focus, button:active {
     font-family: var(--middle-f-f);
     font-size: 17px;
     margin-left: 15px;
+    margin-right: 10px;
 }
 button.header__button {
     border: 1px solid var(--white);
     border-radius: 50px;
     color: var(--white);
     padding: 14px 20px;
-    margin-left: 30px;
     cursor: pointer;
     font-family: var(--middle-f-f);
     transition: 0.3s;
-    margin-top: 0;
-    background-color: transparent;
     margin: 0;
+    background-color: transparent;
 }
 .header__button:hover {
     background: rgb(56, 158, 186);
@@ -198,8 +197,9 @@ section {
     align-items: center;
     justify-content: flex-start;
 }
-.footer__bottom {
+.footer .footer__bottom {
     margin-top: 30px;
+    margin-left: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;

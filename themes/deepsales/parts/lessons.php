@@ -93,5 +93,7 @@
                 </ul>
             </div>
         </div>
+        <button class="button button__lessons">Приєднатися</button>
+        <p class="lessons__text">Миттєвий доступ через особистий кабінет після оплати</p>
     </div>
 </section>
