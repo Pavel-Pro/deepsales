@@ -22,7 +22,8 @@
                         <?php $problem_manager = $s['problem_manager']; ?>
                         <?php if($problem_manager) { ?>
                             <?php foreach($problem_manager as $item) { ?>
-                                <li class="problem-list__item">
+
+                                <li class="problem-list__item <?php if(is_page(145)) echo 'problem-list__like' ?>">
                                     <?= $item['problem_manager_item'] ?>
                                 </li>
                             <?php } ?>

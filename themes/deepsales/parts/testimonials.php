@@ -26,5 +26,11 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+            <?php if(is_page(145)) { ?>
+                <div class="package__bottom">
+                    <div class="guarantees__day"><?= $s['guarantees__day'] ?></div>
+                    <p class="guarantees__text"><?= $s['guarantees__text'] ?></p>
+                </div> 
+            <?php } ?>
         </div>
     </section>

@@ -1,61 +1,62 @@
 <section class="package">
     <div class="wrapper">
-        <h2 class="title package__title">Обрати свій пакет навчання</h2>
+        <h2 class="title package__title"><?= $s['package__title'] ?></h2>
         <div class="package__items">
             <div class="package__item">
-                <span class="package_advice">Ідеально для тестування</span>
-                <h3 class="package__name">старт</h3>
-                <span class="package__interest">Спробуй систему за 14 днів</span>
+                <span class="package_advice"><?= $s['start__toptitle'] ?></span>
+                <h3 class="package__name"><?= $s['start__title'] ?></h3>
+                <span class="package__interest"><?= $s['start__undertitle'] ?></span>
                 <ul class="package__list">
-                    <li class="package__paragraph">Всі 5 відео-уроків</li>
-                    <li class="package__paragraph">Доступ на 14 днів</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без матеріалів та шаблонів</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без домашніх завдань</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без індивідуальної сесії з Євгеном</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без доступу на рік</li>
+                    <?php $start = $s['start_package'] ?>
+                    <?php if($start) { ?>
+                        <?php foreach($start as $item) { ?>
+                            <li class="package__paragraph <?php if($item['package_notavailable'] === true) echo 'package__paragraph_not-available' ?>">
+                                <?= $item['start_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
-                <span class="package__price">Всього 490 грн</span>
-                <button class="button package__button">Отримати систему</button>
+                <span class="package__price"><?= $s['start__price'] ?></span>
+                <button class="button package__button"><?= $s['start__button'] ?></button>
             </div>
             <div class="package__item">
-                <span class="package_advice">Найпопулярніший вибір</span>
-                <h3 class="package__name">система</h3>
-                <span class="package__interest">Повне впровадження</span>
+                <span class="package_advice"><?= $s['system__toptitle'] ?></span>
+                <h3 class="package__name"><?= $s['system__title'] ?></h3>
+                <span class="package__interest"><?= $s['system__undertitle'] ?></span>
                 <ul class="package__list">
-                    <li class="package__paragraph">Всі 5 відео-уроків</li>
-                    <li class="package__paragraph">Доступ на 6 місяців</li>
-                    <li class="package__paragraph">Всі матеріали та шаблони (Excel, PDF)</li>
-                    <li class="package__paragraph">Домашні завдання з чек-листами</li>
-                    <li class="package__paragraph">Шаблон щотижневого розбору</li>
-                    <li class="package__paragraph">Можливість завантаження файлів</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без індивідуальної сесії з Євгеном</li>
-                    <li class="package__paragraph package__paragraph_not-available">Без доступу на рік</li>
+                    <?php $system = $s['system_package'] ?>
+                    <?php if($system) { ?>
+                        <?php foreach($system as $item) { ?>
+                            <li class="package__paragraph <?php if($item['package_notavailable'] === true) echo 'package__paragraph_not-available' ?>">
+                                <?= $item['system_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
-                <span class="package__price">Всього 1 260 грн</span>
-                <button class="button package__button">Отримати систему</button>
+                <span class="package__price"><?= $s['system__price'] ?></span>
+                <button class="button package__button"><?= $s['system__button'] ?></button>
             </div>
             <div class="package__item">
-                <span class="package_advice">Для максимального результату</span>
-                <h3 class="package__name">майстер</h3>
-                <span class="package__interest">Персональне впровадження</span>
+                <span class="package_advice"><?= $s['master__toptitle'] ?></span>
+                <h3 class="package__name"><?= $s['master__title'] ?></h3>
+                <span class="package__interest"><?= $s['master__undertitle'] ?></span>
                 <ul class="package__list">
-                    <li class="package__paragraph">Всі 5 відео-уроків</li>
-                    <li class="package__paragraph">Доступ на 1 рік</li>
-                    <li class="package__paragraph">Всі матеріали та шаблони (Excel, PDF)</li>
-                    <li class="package__paragraph">Домашні завдання з чек-листами</li>
-                    <li class="package__paragraph">Шаблон щотижневого розбору</li>
-                    <li class="package__paragraph">Можливість завантаження файлів</li>
-                    <li class="package__paragraph">Індивідуальна сесія з Євгеном ( до 60 хв) - Розбір вашого кейсу та CRM, Персональні рекомендації</li>
+                    <?php $master = $s['master_package'] ?>
+                    <?php if($master) { ?>
+                        <?php foreach($master as $item) { ?>
+                            <li class="package__paragraph <?php if($item['package_notavailable'] === true) echo 'package__paragraph_not-available' ?>">
+                                <?= $item['master_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
-                <span class="package__price">Всього 3 560 грн</span>
-                <button class="button package__button">Отримати VIP доступ</button>
+                <span class="package__price"><?= $s['master__price'] ?></span>
+                <button class="button package__button"><?= $s['master__button'] ?></button>
             </div>
         </div>
         <div class="package__bottom">
-            <div class="guarantees__day">гарантія <span class="guarantees__day_yellow">14 днів</span></div>
-            <p class="guarantees__text">
-                Якщо курс не дасть вам структуру в роботі — повернемо всі гроші без питань. Діє для всіх пакетів
-            </p>
+            <div class="guarantees__day"><?= $s['guarantees__day'] ?></div>
+            <p class="guarantees__text"><?= $s['package__text'] ?></p>
         </div>
     </div>
 </section>

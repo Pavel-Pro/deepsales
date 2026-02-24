@@ -30,6 +30,7 @@ add_action( 'carbon_fields_register_fields', function() {
                     Field::make( 'complex', 'kursfor_block', __( 'Перечень должностей кому это будет интересно' ) )
                         ->set_layout('tabbed-horizontal')
                         ->set_width(50)
+                        ->set_max( 5 )
                         ->add_fields( 'kursfor_list', '', [
                             Field::make( 'text', 'kursfor_position', __( 'Должность интересанта' )),
                         ]),
@@ -97,9 +98,130 @@ add_action( 'carbon_fields_register_fields', function() {
                 ] )
                 ->add_fields( 'lessons', 'Секция "5 Уроков"', [
                     Field::make( 'text', 'lessons__title', __( 'Заголовок' )),
+                    Field::make( 'text', 'lessons_number1', __( 'Текст и номер урока' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'lessons1_title', __( 'Заголовок блока' ))
+                        ->set_width(70),
+                    Field::make( 'complex', 'lessons1_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons1_list', '', [
+                            Field::make( 'text', 'lessons1_item', __( 'Тема урока' )),
+                        ]),
+                    Field::make( 'text', 'lessons_number2', __( 'Текст и номер урока' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'lessons2_title', __( 'Заголовок блока' ))
+                        ->set_width(70),
+                    Field::make( 'complex', 'lessons2_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons2_list', '', [
+                            Field::make( 'text', 'lessons2_item', __( 'Тема урока' )),
+                        ]),
+                    Field::make( 'text', 'lessons_number3', __( 'Текст и номер урока' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'lessons3_title', __( 'Заголовок блока' ))
+                        ->set_width(70),
+                    Field::make( 'complex', 'lessons3_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons3_list', '', [
+                            Field::make( 'text', 'lessons3_item', __( 'Тема урока' )),
+                        ]),
+                     Field::make( 'text', 'lessons_number4', __( 'Текст и номер урока' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'lessons4_title', __( 'Заголовок блока' ))
+                        ->set_width(70),
+                    Field::make( 'complex', 'lessons4_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons4_list', '', [
+                            Field::make( 'text', 'lessons4_item', __( 'Тема урока' )),
+                        ]),
+                    Field::make( 'text', 'lessons_number5', __( 'Текст и номер урока' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'lessons5_title', __( 'Заголовок блока' ))
+                        ->set_width(70),
+                    Field::make( 'complex', 'lessons5_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons5_list', '', [
+                            Field::make( 'text', 'lessons5_item', __( 'Тема урока' )),
+                        ]),
+                    Field::make( 'text', 'lessons_number6', __( 'Текст' ))
+                        ->set_width(50),
+                    Field::make( 'complex', 'lessons6_block', __( 'Этапы диагностики' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->set_max( 6 )
+                        ->add_fields( 'lessons6_list', '', [
+                            Field::make( 'text', 'lessons6_item', __( 'Тема урока' )),
+                        ]),
+                    Field::make( 'text', 'lessons_button', __( 'Текст кнопки' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'lessons_text', __( 'Текст под кнопкой' ))
+                        ->set_width(50),
                 ] )
                 ->add_fields( 'package', 'Секция c пакетами обучения"', [
                     Field::make( 'text', 'package__title', __( 'Заголовок' )),
+                    Field::make( 'text', 'start__toptitle', __( 'Текст над названием пакета обучения "Старт"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'start__title', __( 'Названием пакета обучения "Старт"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'start__undertitle', __( 'Текст под названием пакета обучения "Старт"' ))
+                        ->set_width(30),
+                    Field::make( 'complex', 'start_package', __( 'Список услуг пакета "Старт"' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->add_fields( 'start_list', '', [
+                            Field::make( 'text', 'start_item', __( 'Пункты услуг "Старт"' )),
+                            Field::make( 'checkbox', 'package_notavailable', 'Не доступно' )
+                                ->set_option_value( 'yes' )
+                                ->set_help_text('Поставить галочку если это опция в пакете не доступна')
+                        ]),
+                    Field::make( 'text', 'start__price', __( 'Цена пакета обучения "Старт"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'start__button', __( 'Текст кнопки пакета обучения "Старт"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'system__toptitle', __( 'Текст над названием пакета обучения "Система"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'system__title', __( 'Названием пакета обучения "Система"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'system__undertitle', __( 'Текст под названием пакета обучения "Система"' ))
+                        ->set_width(30),
+                    Field::make( 'complex', 'system_package', __( 'Список услуг пакета "Система"' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->add_fields( 'system_list', '', [
+                            Field::make( 'text', 'system_item', __( 'Пункты услуг "Система"' )),
+                            Field::make( 'checkbox', 'package_notavailable', 'Не доступно' )
+                                ->set_option_value( 'yes' )
+                                ->set_help_text('Поставить галочку если это опция в пакете не доступна')
+                        ]),
+                    Field::make( 'text', 'system__price', __( 'Цена пакета обучения "Система"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'system__button', __( 'Текст кнопки пакета обучения "Система"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'master__toptitle', __( 'Текст над названием пакета обучения "Мастер"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'master__title', __( 'Названием пакета обучения "Мастер"' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'master__undertitle', __( 'Текст под названием пакета обучения "Мастер"' ))
+                        ->set_width(30),
+                    Field::make( 'complex', 'master_package', __( 'Список услуг пакета "Мастер"' ) )
+                        ->set_layout('tabbed-vertical')
+                        ->add_fields( 'master_list', '', [
+                            Field::make( 'text', 'master_item', __( 'Пункты услуг "Мастер"' )),
+                            Field::make( 'checkbox', 'package_notavailable', 'Не доступно' )
+                                ->set_option_value( 'yes' )
+                                ->set_help_text('Поставить галочку если это опция в пакете не доступна')
+                        ]),
+                    Field::make( 'text', 'master__price', __( 'Цена пакета обучения "Мастер"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'master__button', __( 'Текст кнопки пакета обучения "Мастер"' ))
+                        ->set_width(50),
+                    Field::make( 'text', 'guarantees__day', __( 'Срок гарантии' ))
+                        ->set_help_text('Для выделение жёлтым цветом обернуть в тег <span></span>')
+                        ->set_width(30),
+                    Field::make( 'text', 'package__text', __( 'Текст гарантии курсу' ))
+                        ->set_width(70),
                 ] )
                 ->add_fields( 'effect', 'Секция "Эффект от внедрения"', [
                     Field::make( 'text', 'effect__title', __( 'Заголовок' )),
@@ -166,16 +288,28 @@ add_action( 'carbon_fields_register_fields', function() {
                                 ->set_width(40),
                             Field::make( 'rich_text', 'text', __( 'Текст отзыва' )),
                         ]),
+                    Field::make( 'text', 'guarantees__day', __( 'Срок гарантии' ))
+                        ->set_width(30),
+                    Field::make( 'text', 'guarantees__text', __( 'Текст гарантии курсу' ))
+                        ->set_width(70),
                 ] )
                 ->add_fields( 'faq', 'Секция Вопросы ответ', [
                     Field::make( 'text', 'faq__title', __( 'Заголовок' )),
+                    Field::make( 'complex', 'faq_list', __( 'Вопросы, ответы' ) )
+                        ->set_width(50)
+                        ->set_layout('tabbed-horizontal')
+                        ->add_fields( 'question_answer', '', [
+                            Field::make( 'text', 'question', __( 'Вопрос' )),
+                            Field::make( 'rich_text', 'answer', __( 'Ответ' )),
+                        ]),
                 ] )
                 ->add_fields( 'form', 'Секция "Форма запроса консультации"', [
                     Field::make( 'text', 'form__title', __( 'Заголовок' )),
                     Field::make( 'text', 'form__undertitle', __( 'Подзаголовок' ))
                 ] )
                 ->add_fields( 'important', 'Секция "Важно!"', [
-                    Field::make( 'text', 'important__title', __( 'Заголовок' )),
+                    Field::make( 'rich_text', 'important__text1', __( 'Текст Важно на английском' )),
+                    Field::make( 'rich_text', 'important__text2', __( 'Текст Важно на украинском' )),
                 ] )
         ] );
 

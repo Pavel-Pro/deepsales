@@ -75,6 +75,16 @@
         });
 
 
+        $('.faq__question').on('click', function() {
+
+            $(this).next().toggleClass('faq__answer_show');
+            $(this).toggleClass('rotate');
+            $(this).parent().siblings().children('.faq__answer').removeClass('faq__answer_show');
+            $(this).parent().siblings().children('.faq__question').removeClass('rotate');
+           
+        });
+
+
 
         function showToTop() {
             ($(window).scrollTop() > 500) ? $('.totop').css('opacity', '1') : $('.totop').css('opacity', '0'); 

@@ -498,7 +498,7 @@ h5.title {
     }
     .footer {
         margin-top: -57px;
-        padding: 50px 0 50px;
+        padding: 70px 0 50px;
     }
     .footer-top nav {
         order: unset;
@@ -620,7 +620,7 @@ h5.title {
         height: 90vh;
     }
     .footer {
-        padding: 80px 0 50px;
+        padding: 80px 0 20px;
     }
     .footer__bottom {
         flex-direction: column;

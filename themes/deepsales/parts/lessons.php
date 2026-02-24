@@ -3,97 +3,90 @@
         <h2 class="title title__lessons"><?= $s['lessons__title'] ?></h2>
         <div class="lessons__items">
             <div class="lessons__item">
-                <span class="solution__stage">Урок 1</span>
-                <h4 class="solution__item_title">Стадії воронки</h4>
+                <span class="solution__stage"><?= $s['lessons_number1'] ?></span>
+                <h4 class="solution__item_title"><?= $s['lessons1_title'] ?></h4>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        9 етапів: від Backlog до Lost
-                    </li>
-                    <li class="solution-list__item">
-                        Індикатори ризику — як швидко помічати проблеми
-                    </li>
-                    <li class="solution-list__item">
-                        Мінімальні поля для кожної угоди
-                    </li>
+                    <?php $lessons1 = $s['lessons1_block'] ?>
+                    <?php if($lessons1) { ?>
+                        <?php foreach($lessons1 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons1_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="lessons__item">
-                <span class="solution__stage">Урок 2</span>
-                <h4 class="solution__item_title">Правила переходів</h4>
+                <span class="solution__stage"><?= $s['lessons_number2'] ?></span>
+                <h4 class="solution__item_title"><?= $s['lessons2_title'] ?></h4>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        Коли рухати угоду далі (exit criteria)
-                    </li>
-                    <li class="solution-list__item">
-                        Карта дозволених переходів
-                    </li>
-                    <li class="solution-list__item">
-                        Типові помилки менеджерів
-                    </li>
+                    <?php $lessons2 = $s['lessons2_block'] ?>
+                    <?php if($lessons2) { ?>
+                        <?php foreach($lessons2 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons2_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="lessons__item">
-                <span class="solution__stage">Урок 3</span>
-                <h4 class="solution__item_title">"Наступний крок" у кожній угоді</h4>
+                <span class="solution__stage"><?= $s['lessons_number3'] ?></span>
+                <h4 class="solution__item_title"><?= $s['lessons3_title'] ?></h4>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        10 готових шаблонів Next Step
-                    </li>
-                    <li class="solution-list__item">
-                        Швидкі перевірки "дірок" у CRM
-                    </li>
-                    <li class="solution-list__item">
-                        Стандарти заповнення карток
-                    </li>
+                    <?php $lessons3 = $s['lessons3_block'] ?>
+                    <?php if($lessons3) { ?>
+                        <?php foreach($lessons3 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons3_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="lessons__item">
-                <span class="solution__stage">Урок 4</span>
-                <h4 class="solution__item_title">Ритми контролю</h4>
+                <span class="solution__stage"><?= $s['lessons_number4'] ?></span>
+                <h4 class="solution__item_title"><?= $s['lessons4_title'] ?></h4>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        Щодня 5-10 хв — без мікроменеджменту
-                    </li>
-                    <li class="solution-list__item">
-                        Щотижня 30-45 хв — фокус на ризиках
-                    </li>
-                    <li class="solution-list__item">
-                        Шаблон розбору угоди за 3 хв
-                    </li>
+                    <?php $lessons4 = $s['lessons4_block'] ?>
+                    <?php if($lessons4) { ?>
+                        <?php foreach($lessons4 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons4_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="lessons__item">
-                <span class="solution__stage">Урок 5</span>
-                <h4 class="solution__item_title">Онбординг за 2 тижні</h4>
+                <span class="solution__stage"><?= $s['lessons_number5'] ?></span>
+                <h4 class="solution__item_title"><?= $s['lessons5_title'] ?></h4>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        Покроковий план введення
-                    </li>
-                    <li class="solution-list__item">
-                        Критерії готовності менеджера
-                    </li>
-                    <li class="solution-list__item">
-                        Sales Playbook — що має бути під рукою
-                    </li>
+                    <?php $lessons5 = $s['lessons5_block'] ?>
+                    <?php if($lessons5) { ?>
+                        <?php foreach($lessons5 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons5_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="lessons__item">
-                <span class="solution__stage">Додатково</span>
-                <h4 class="solution__item_title"></h4>
+                <span class="solution__stage"><?= $s['lessons_number6'] ?></span>
                 <ul class="solution-list">
-                    <li class="solution-list__item">
-                        Домашні завдання (без жорстких дедлайнів)
-                    </li>
-                    <li class="solution-list__item">
-                        Файли та табличні шаблони до кожного уроку
-                    </li>
-                    <li class="solution-list__item">
-                        «Шаблон щотижневого розбору»
-                    </li>
+                    <?php $lessons6 = $s['lessons6_block'] ?>
+                    <?php if($lessons6) { ?>
+                        <?php foreach($lessons6 as $item) { ?>
+                            <li class="solution-list__item">
+                                <?= $item['lessons6_item'] ?>
+                            </li>
+                        <?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
-        <button class="button button__lessons">Приєднатися</button>
-        <p class="lessons__text">Миттєвий доступ через особистий кабінет після оплати</p>
+        <button class="button button__lessons"><?= $s['lessons_button'] ?></button>
+        <p class="lessons__text"><?= $s['lessons_text'] ?></p>
     </div>
 </section>
