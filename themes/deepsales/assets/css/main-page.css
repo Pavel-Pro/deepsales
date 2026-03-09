@@ -647,19 +647,45 @@ input:focus::placeholder {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .consultation-form__bottom p {
     margin-right: 40px;
     font-size: 14px;
 }
-input[type="submit"] {
-    color: var(--black-navy);
-    border: 2px solid transparent;
-    border-radius: 50px;
+.consultation-form__bottom .wpcf7-form-control-wrap {
+    flex-basis: 60%;
+}
+.wpcf7-list-item {
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+.consultation-form__bottom .wpcf7-acceptance
+label {
+    display: flex;
+}
+.consultation-form__bottom .wpcf7-acceptance
+input[type="checkbox"] {
+    height: 15px;
     width: auto;
-    height: auto;
-    padding: 14px 32px;
+    padding-left: 0;
     margin-top: 0;
+    margin-right: 5px;
+}
+.consultation-form__bottom .wpcf7-acceptance
+span {
+    font-size: 14px;
+    color: rgb(96, 122, 134);
+}
+.consultation-form__bottom .wpcf7-acceptance
+span a {
+    font-size: 13px;
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+}
+.consultation-form__bottom .wpcf7-acceptance
+span a:hover {
+    text-decoration: underline;
 }
 .wpcf7-spinner {
     display: none;
@@ -848,10 +874,21 @@ input:focus::placeholder {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .consultation-form__bottom p {
     margin-right: 40px;
-    font-size: 14px;
+    font-size: 12px;
+    flex-basis: 100%;
+    margin-top: 40px;
+}
+.consultation-form__bottom p a {
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+    font-size: 11px;
+}
+.consultation-form__bottom p a:hover {
+    text-decoration: underline;
 }
 input[type="submit"] {
     color: var(--black-navy);
@@ -860,7 +897,7 @@ input[type="submit"] {
     width: auto;
     height: auto;
     padding: 14px 32px;
-    margin-top: 0;
+    margin: 0 0 0 0;
 }
 .wpcf7-spinner {
     display: none;
@@ -952,6 +989,30 @@ label > span {
 .callback-form input::placeholder {
     color: rgb(126, 149, 160);
 }
+.checkbox__wrap label {
+    display: flex;
+    margin-top: 18px;
+}
+.checkbox__wrap .wpcf7-acceptance 
+input[type="checkbox"] {
+    height: 15px;
+    width: auto;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 5px;
+}
+.checkbox__wrap .wpcf7-acceptance span {
+    font-size: 14px;
+    color: rgb(96, 122, 134);
+}
+.checkbox__wrap .wpcf7-acceptance span a {
+    font-size: 13px;
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+}
+.checkbox__wrap .wpcf7-acceptance span a:hover {
+    text-decoration: underline;
+}
 .callback-form input[type="submit"] {
     color: var(--black-navy);
     border: 2px solid transparent;
@@ -959,12 +1020,25 @@ label > span {
     width: auto;
     height: auto;
     padding: 14px 32px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .callback-form input[type="submit"]:hover {
     background: var(--black-navy);
     color: var(--yellow);
     border: 2px solid var(--yellow);
+}
+.callback-form p {
+    font-size: 12px;
+    flex-basis: 100%;
+    margin-top: 40px;
+}
+.callback-form p a {
+    font-size: 13px;
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+}
+.callback-form p a:hover {
+    text-decoration: underline;
 }
 .callback-form {
     display: none;
@@ -1543,6 +1617,9 @@ label > span {
     .consultation-form__bottom p {
         margin-right: 20px;
     }
+    .consultation-form__bottom .wpcf7-form-control-wrap {
+        flex-basis: 57%;
+    }
     .contact__item:nth-child(odd) {
         padding: 16px;
     }
@@ -1736,9 +1813,14 @@ label > span {
     }
     .consultation-form__bottom p {
         font-size: 12px;
+        margin-top: 30px;
+        margin-right: 0;
     }
     .consultation label {
         font-size: 14px;
+    }
+    .callback-form form {
+        width: 70%;
     }
     .callback-form label {
         font-size: 14px;
@@ -1963,6 +2045,11 @@ label > span {
         margin-top: 14px;
         height: auto;
     }
+    .consultation-form__bottom .wpcf7-acceptance 
+    input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+    }
     .contact-page .title__contact-page {
         margin-top: 55px;
     }
@@ -2007,6 +2094,7 @@ label > span {
     .callback-form form {
         border-radius: 15px;
         padding: 20px;
+        width: 88%;
     }
     .callback-form label {
         flex-basis: 100%;
@@ -2023,9 +2111,22 @@ label > span {
         display: flex;
         flex-direction: column;
     }
+    .checkbox__wrap .wpcf7-acceptance 
+    input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+    }
     .callback-form input[type="submit"] {
         margin-top: 25px;
         height: auto;
+    }
+    .callback-form p {
+        margin-top: 30px;
+    }
+    .callback-form p a {
+        font-size: 11px;
+        transition: 0.3s;
+        color: rgb(14, 116, 144);
     }
     .kursfor__item {
         height: 100px;

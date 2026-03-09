@@ -7,7 +7,6 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
 Container::make( 'theme_options', __( 'Theme Options' ) )
     ->add_tab(  __( 'Номер телефона' ), array(
-        Field::make( 'text', 'header_btn', __( 'Текст кнопки в шапке сайта' ) ),
         Field::make( 'image', 'social_icon', __( 'Иконка соц. сети' ) )
             ->set_help_text('Добавление иконки в формате svg')
             ->set_width(20),
@@ -64,21 +63,11 @@ Container::make( 'theme_options', __( 'Theme Options' ) )
             ] ),
     ) )
     ->add_tab(  __( 'Подвал сайта' ), array(
-        Field::make( 'text', 'copy', __( 'Текст копирайта сайта с датой' ) )
-            ->set_help_text('Добавления текста копирайта'),
-        Field::make( 'text', 'offer_text', __( 'Текст ссылки на страницу Публичной оферты' ) )
-            ->set_help_text('Добавления текста копирайта')
-            ->set_width(50),
         Field::make( 'text', 'offer_link', __( 'Ссылка на страницу Публичной оферты' ) )
-            ->set_help_text('Добавления текста копирайта')
-            ->set_width(50),
-        Field::make( 'text', 'policy_text', __( 'Текст ссылки на страницу Политики Конфиденциальности' ) )
             ->set_help_text('Прописывать в формате - /public-offer')
             ->set_width(50),
         Field::make( 'text', 'policy_link', __( 'Ссылка на страницу Политики Конфиденциальности' ) )
             ->set_help_text('Прописывать в формате - /privacy-policy')
-            ->set_width(50),
-        Field::make( 'text', 'footer_btn', __( 'Текст кнопки в подвале сайта' ) )
             ->set_width(50),
     ) )
     ->add_tab(  __( '404 Страница' ), array(
@@ -90,15 +79,5 @@ Container::make( 'theme_options', __( 'Theme Options' ) )
             ->set_width(30),
         Field::make( 'text', 'mistake_btn', __( 'Название кнопки' ) )
             ->set_width(30),
-    ) )
-    ->add_tab(  __( 'Блок Cookie' ), array(
-        Field::make( 'text', 'cookie_title', __( 'Заголовок' ) )
-            ->set_width(30),
-        Field::make( 'rich_text', 'cookie_text', __( 'Текст блока' ) )
-            ->set_width(70),
-        Field::make( 'text', 'cookie_btn1', __( 'Название первой кнопки' ) )
-            ->set_width(50),
-        Field::make( 'text', 'cookie_btn2', __( 'Название второй кнопки' ) )
-            ->set_width(50),
     ) );
 }

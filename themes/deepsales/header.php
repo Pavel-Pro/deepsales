@@ -15,11 +15,11 @@
     <header class="header">
         <div class="wrapper">
             <div class="header-wrap">
-                <?php echo get_custom_logo(); ?>
+                <?php pll_home_url(the_custom_logo()); ?>
                 <nav class="nav">
                     <ul class="menu">
-                        <?php if ( $menu_items = wp_get_nav_menu_items('Main Menu ua') ) {
-                            foreach ( $menu_items as $key => $menu_item ) { ?>
+                        <?php if ( $menu_items = wp_get_nav_menu_items('Main Menu ' . pll_current_language()) ) {
+                            foreach ( (array) $menu_items as $key => $menu_item ) { ?>
                                 <li class="menu__item">
                                     <a href="<?php echo $menu_item->url; ?>" class="menu__link"
                                     <?php echo $menu_item->xfn ? 'rel=" ' . $menu_item->xfn . '"' : ''; ?>>
@@ -36,12 +36,14 @@
                     </burger>
                 </nav>
                 <div class="header-lan">
-                    <?php pll_the_languages(array('
-                        "dropdown" => "0",
-                        "show_names" => "1",
-                        "show_flags" => "0",
-                        "hide_if_no_translation" => "1"
-                    ')); ?>
+                    <ul>
+                        <?php pll_the_languages(array('
+                            "dropdown" => "0",
+                            "show_names" => "1",
+                            "show_flags" => "0",
+                            "hide_if_no_translation" => "1"
+                        ')); ?>
+                    </ul>
                 </div>
                 <div class="phone-wrap">
                     <?= file_get_contents(get_attached_file(tof('social_icon'))); ?>
@@ -49,7 +51,7 @@
                     </svg>
                     <a href="tel:<?= tof('phone_link'); ?>" class="header-phone__link"><?= tof('phone_text'); ?></a>
                 </div>
-                <button class="header__button"><?= tof('header_btn'); ?></button>
+                <button class="header__button"><?= pll__('header_btn'); ?></button>
             </div>
         </div>
     </header>

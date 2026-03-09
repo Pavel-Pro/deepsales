@@ -59,7 +59,7 @@ function deepsales_scripts() {
     wp_enqueue_style('kurs-page-style', get_template_directory_uri() . '/assets/css/kurs-page.css', array(), filemtime(get_theme_file_path('/assets/css/kurs-page.css')));
     wp_enqueue_style('profile-page-style', get_template_directory_uri() . '/assets/css/profile-page.css', array(), filemtime(get_theme_file_path('/assets/css/profile-page.css')));
 
-    if ( is_page(['privacy-policy', 'public-offer']) ) {
+    if ( is_page([3, 408, 409, 22]) ) {
         wp_enqueue_style('policy-page-style', get_template_directory_uri() . '/assets/css/policy.css', array(), filemtime(get_theme_file_path('/assets/css/policy.css')));
     }
 
@@ -70,3 +70,4 @@ function deepsales_scripts() {
 
 
 require_once __DIR__ . '/inc/carbon-fields/index.php';
+require_once __DIR__ . '/inc/polylang/index.php';

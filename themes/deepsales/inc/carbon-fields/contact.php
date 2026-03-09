@@ -6,7 +6,7 @@ use Carbon_Fields\Field;
 
 add_action( 'carbon_fields_register_fields', function() {
     Container::make( 'post_meta', __( 'Контент' ) )
-    ->where( 'post_id', '=', 134 )
+    ->where( 'post_id', 'IN', [134, 404] )
     ->add_tab(  __( 'Блок с фотографией' ), array(
         Field::make( 'image', 'photo', __( 'Личная фотография' ) )
             ->set_help_text('Фотография должна быть в формате .webp. Разрешение фотографии 155х172 фон прозрачный.')

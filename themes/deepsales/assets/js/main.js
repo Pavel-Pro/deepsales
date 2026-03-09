@@ -12,12 +12,12 @@
 
 
         function resize1024() {
+
             if ( $(window).width() <= 1024 ) {
                 let contPhone = $('.phone-wrap').html();
                 $('.phone-wrap').appendTo('.menu');
                 $('.menu').find('div').replaceWith(`<li class="phone-wrap">${contPhone}</li>`);
             }
-            
         }
 
         resize1024();
@@ -25,6 +25,24 @@
         $(window).on('resize', function() {
             resize1024();
         });
+
+
+            function resize768() {
+            
+            if ( $(window).width() <= 768 ) {
+                let langWrap = $('.header-lan').html();
+                $('.header-lan').appendTo('.menu');
+                $('.menu').find('div').replaceWith(`<li class="header-lan">${langWrap}</li>`);
+            }
+            
+        }
+
+        resize768();
+
+        $(window).on('resize', function() {
+            resize768();
+        });
+
 
         const swiperTestimonials = new Swiper('.testimonials__slider', {
             slidesPerView: 1,
@@ -96,5 +114,6 @@
 
         $(window).scroll( function(){ showToTop(); } );
         showToTop();
+
 
     }(jQuery));
