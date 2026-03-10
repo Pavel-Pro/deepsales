@@ -1,6 +1,7 @@
 <?php
 
 if (function_exists('pll_register_string')) {
+    pll_register_string('Текст "Обновленно" для страниц Политики и Офера', 'date_update');
     pll_register_string('Кнопка в шапке сайта', 'header_btn');
     pll_register_string('Кнопка в подвале сайта', 'footer_btn');
     pll_register_string('Текст копирайта', 'copy_text');

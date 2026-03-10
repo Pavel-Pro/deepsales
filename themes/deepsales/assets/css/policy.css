@@ -5,11 +5,11 @@
     position: relative;
     z-index: 16;
 }
-ol {
+.privacy ol {
     list-style: none;
     counter-reset: li;
 }
-ol > li:before {
+.privacy ol > li:before {
     counter-increment: li;
     content: counters(li, ".") ". ";
 }
@@ -31,115 +31,115 @@ ol > li:before {
     padding: 30px;
     margin-top: 30px;
 }
-a {
+.privacy a {
     text-decoration: underline;
     cursor: pointer;
     font-size: 15px;
 }
-a:hover {
+.privacy a:hover {
     text-decoration: none;
 }
-h3 {
+.privacy h3 {
     margin-top: 20px;
     font-size: 24px;
 }
-strong {
+.privacy strong {
     text-transform: uppercase;
     color: var(--black-navy);
     font-size: 28px;
     font-family: var(--middle-f-f);
 }
-p {
+.privacy p {
     margin-top: 15px;
 }
-span {
+.privacy span {
     margin-top: 20px;
     font-weight: 600;
     display: block;
 }
-.content > ol > li {
+.privacy .content > ol > li {
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     margin-top: 20px;
 } 
-li {
+.privacy li {
     margin-top: 10px;
 }
-li > p {
+.privacy li > p {
     font-size: 16px;
     text-transform: none;
 }
-li > ol {
+.privacy li > ol {
     margin-left: 10px;
 }
-li > ol > li {
+.privacy li > ol > li {
     margin-left: 7px;
     font-size: 16px;
     text-transform: none;
 }
-li > ol > li > ol > li {
+.privacy li > ol > li > ol > li {
     font-size: 14px;
 }
-ul {
+.privacy ul {
     padding-left: 10px;
     list-style-type: circle;
     list-style-position: inside;
 }
-table {
+.privacy table {
     margin-top: 20px;
     border-radius: 30px;
     border: 3px solid rgb(14, 116, 144);
 }
-thead {
+.privacy thead {
     background: var(--black-navy);
 }
-th {
+.privacy th {
     color: var(--white);
     border: 1px solid var(--white);
     vertical-align: middle;
     padding: 10px 5px;
 }
-tr:nth-child(even) {
+.privacy tr:nth-child(even) {
     background: var(--blue);
 }
-td {
+.privacy td {
     padding: 10px 5px;
     border: 1px solid rgb(14, 116, 144);
     font-size: 15px;
 }
 @media screen and (max-width: 768px) {
-    .privacy-container {
+    .privacy .privacy-container {
         border-radius: 30px;
         padding: 15px;
     }
-    p {
+    .privacy p {
         margin-top: 10px;
         font-size: 15px;
     }
-    .content > ol > li {
+    .privacy .content > ol > li {
         font-size: 16px;
         margin-top: 18px;
     }
-        li > ol > li {
+     .privacy li > ol > li {
         font-size: 15px;
     }
-    th {
+    .privacy th {
         padding: 8px 3px;
     }
-    td {
+    .privacy td {
         padding: 8px 3px;
         font-size: 14px;
         hyphens: auto;
         word-break: break-all;
     }
-    a {
+    .privacy a {
         font-size: 14px;
     }
-    strong {
+    .privacy strong {
         font-size: 16px;
     }
-    h3 {
+    .privacy h3 {
         margin-top: 15px;
         font-size: 21px;
     }
