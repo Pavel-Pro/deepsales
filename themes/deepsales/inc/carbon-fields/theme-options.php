@@ -16,6 +16,12 @@ Container::make( 'theme_options', __( 'Theme Options' ) )
         Field::make( 'text', 'phone_link', __( 'Ссылка на прямой звонок с сайта' ) )
             ->set_help_text('Заполнить поле в формате - +30993333333')
             ->set_width(40),
+        Field::make( 'text', 'pop-up_lang_title', __( 'Заголовок pop-up с выбор перехода на украинский язык' ) )
+            ->set_width(50),
+        Field::make( 'text', 'pop-up_lang_no', __( 'Текст кнопки "Ні"' ) )
+            ->set_width(25),
+        Field::make( 'text', 'pop-up_lang_yes', __( 'Текст кнопки "Так"' ) )
+            ->set_width(25),
         Field::make( 'complex', 'phone_numbers', __( 'Номера телефонов' ) )
             ->set_layout('tabbed-horizontal')
             ->set_width(50)

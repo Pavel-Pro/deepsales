@@ -26,7 +26,6 @@
             resize1024();
         });
 
-
             function resize768() {
             
             if ( $(window).width() <= 768 ) {
@@ -81,8 +80,8 @@
 
         $('.button__cookie:first-child').on('click', function() {
 
-        $('.cookie').remove();
-        document.cookie = "cookieAgree=true; path=/; max-age=31536000";
+            $('.cookie').remove();
+            document.cookie = "cookieAgree=true; path=/; max-age=31536000";
 
         });
 
@@ -103,7 +102,6 @@
         });
 
 
-
         function showToTop() {
             ($(window).scrollTop() > 500) ? $('.totop').css('opacity', '1') : $('.totop').css('opacity', '0'); 
         }
@@ -115,5 +113,47 @@
         $(window).scroll( function(){ showToTop(); } );
         showToTop();
 
+
+        $('.go__package').on('click', function(){
+            $("html, body").animate({
+                scrollTop: $('#package').offset().top
+            }, 800);
+        });
+
+
+        $('.switch-lang__btn_no, a[hreflang="ru-RU"]').on('click', function() {
+
+            document.cookie = "choseRu=true; path=/; max-age=2592000";
+            $('.change-lang').css('display', 'none');
+
+        });
+
+        const currentLang = $('link[rel="alternate"]');
+
+        if(currentLang.attr('hreflang') === 'uk') {
+
+            let currentLang = $('link[rel="alternate"]').attr('href');
+
+            $('.switch-lang__btn_yes').attr('href', currentLang);
+
+        }
+
+
+        $('.order-form__btn').on('click', function() {
+            $('.order-form').show();
+            $('.body').css('overflow', 'hidden');
+
+            let packageTitle =  $(this).siblings('.package__name').html();
+            let packagePrice = $(this).siblings('.package__price').html();
+
+            $('.order-form__title').html(`Замовлення курсу <span>"${packageTitle}"</span> ${packagePrice}`);
+
+
+        });
+
+        $('.form__close, .form__background').on('click', function() {
+            $('.order-form').hide();
+            $('.body').css('overflow', 'visible');
+        });
 
     }(jQuery));

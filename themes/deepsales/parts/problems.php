@@ -31,6 +31,6 @@
                     </ul>
                 </div>
             </div>
-            <button class="button button__problem callform"><?= $s['problem__btn'] ?></button>
+            <button class="button button__problem <?php echo (is_front_page()) ? 'callform' : 'go__package' ?>"><?= $s['problem__btn'] ?></button>
         </div>
     </section>

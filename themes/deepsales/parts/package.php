@@ -1,4 +1,4 @@
-<section class="package">
+<section class="package" id="package">
     <div class="wrapper">
         <h2 class="title package__title"><?= $s['package__title'] ?></h2>
         <div class="package__items">
@@ -17,7 +17,7 @@
                     <?php } ?>
                 </ul>
                 <span class="package__price"><?= $s['start__price'] ?></span>
-                <button class="button package__button"><?= $s['start__button'] ?></button>
+                <button class="button package__button order-form__btn"><?= $s['start__button'] ?></button>
             </div>
             <div class="package__item">
                 <span class="package_advice"><?= $s['system__toptitle'] ?></span>
@@ -34,7 +34,7 @@
                     <?php } ?>
                 </ul>
                 <span class="package__price"><?= $s['system__price'] ?></span>
-                <button class="button package__button"><?= $s['system__button'] ?></button>
+                <button class="button package__button order-form__btn"><?= $s['system__button'] ?></button>
             </div>
             <div class="package__item">
                 <span class="package_advice"><?= $s['master__toptitle'] ?></span>
@@ -51,7 +51,7 @@
                     <?php } ?>
                 </ul>
                 <span class="package__price"><?= $s['master__price'] ?></span>
-                <button class="button package__button"><?= $s['master__button'] ?></button>
+                <button class="button package__button order-form__btn"><?= $s['master__button'] ?></button>
             </div>
         </div>
         <div class="package__bottom">

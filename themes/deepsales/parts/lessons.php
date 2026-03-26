@@ -86,7 +86,7 @@
                 </ul>
             </div>
         </div>
-        <button class="button button__lessons"><?= $s['lessons_button'] ?></button>
+        <button class="button button__lessons go__package"><?= $s['lessons_button'] ?></button>
         <p class="lessons__text"><?= $s['lessons_text'] ?></p>
     </div>
 </section>

@@ -70,6 +70,6 @@
                     </ul>
                 </div>
             </div>
-            <button class="button solution__button callform"><?= $s['solution__btn'] ?></button>
+            <button class="button solution__button <?php echo (is_front_page()) ? 'callform' : 'go__package' ?>"><?= $s['solution__btn'] ?></button>
         </div>  
     </section>

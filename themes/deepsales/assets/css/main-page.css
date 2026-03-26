@@ -1282,6 +1282,12 @@ input[type="checkbox"] {
     border-color: rgb(234, 68, 55);
     color: rgb(234, 68, 55);
 }
+.package__item:last-child .package__button:focus, 
+.package__item:last-child .package__button:active {
+    border: 2px solid rgb(234, 68, 55);
+    color: rgb(234, 68, 55);
+    background: transparent;
+}
 .package__bottom {
     margin-top: 50px;
     display: flex;
@@ -1371,6 +1377,147 @@ input[type="checkbox"] {
     margin-top: 30px;
 }
 /* end important */
+/* start order form */
+.order-form {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.form__background {
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 47, 60, 0.5);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.form__close {
+    align-self: flex-end;
+    border: 1px solid var(--black-navy);
+    border-radius: 5px;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.close__item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--black-navy);
+    transform: rotate(45deg) translate(8px, 8px);
+    border-radius: 5px;
+}
+.close__item:last-child {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.order-form form {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.order-form__title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.order-form__title span {
+    text-transform: uppercase;
+}
+.order-form label {
+    color: rgb(30, 64, 93);
+    display: block;
+}
+label > span {
+    display: block;
+}
+.order-form label + label {
+    margin-top: 30px;
+}
+.order-form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(155, 177, 186);
+    border-radius: 8px;
+    padding-left: 16px;
+    color: rgb(126, 149, 160);
+    margin-top: 4px;
+}
+.order-form input::placeholder {
+    color: rgb(126, 149, 160);
+}
+.checkbox__wrap label {
+    display: flex;
+    margin-top: 18px;
+}
+.checkbox__wrap .wpcf7-acceptance 
+input[type="checkbox"] {
+    height: 15px;
+    width: auto;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 5px;
+}
+.checkbox__wrap .wpcf7-acceptance span {
+    font-size: 14px;
+    color: rgb(96, 122, 134);
+}
+.checkbox__wrap .wpcf7-acceptance span a {
+    font-size: 13px;
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+}
+.checkbox__wrap .wpcf7-acceptance span a:hover {
+    text-decoration: underline;
+}
+.order-form input[type="submit"] {
+    color: var(--black-navy);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    width: auto;
+    height: auto;
+    padding: 14px 32px;
+    margin-top: 40px;
+}
+.order-form input[type="submit"]:hover {
+    background: var(--black-navy);
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+.order-form p {
+    font-size: 12px;
+    flex-basis: 100%;
+    margin-top: 40px;
+}
+.order-form p a {
+    font-size: 13px;
+    transition: 0.3s;
+    color: rgb(14, 116, 144);
+}
+.order-form p a:hover {
+    text-decoration: underline;
+}
+.order-form {
+    display: none;
+}
+/* end order form */
 @media screen and (max-width: 1300px) {
     .hero__items {
         padding-top: 110px;
@@ -1863,7 +2010,13 @@ input[type="checkbox"] {
     .important p + p {
         margin-top: 18px;
     }
+    .order-form form {
+        width: 70%;
     }
+    .order-form label {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width: 768px) {
     .hero {
         height: 100%;
@@ -2201,6 +2354,38 @@ input[type="checkbox"] {
     }
     .faq__answer {
         padding: 10px 20px 12px 0;
+    }
+    .order-form form {
+        border-radius: 15px;
+        padding: 20px;
+        width: 88%;
+    }
+    .order-form label {
+        flex-basis: 100%;
+    }
+    .order-form label + label {
+        margin-top: 20px;
+    }
+    .order-form input {
+        height: 40px;
+        margin-top: 4px;
+    }
+    .order-form .consultation-form__bottom {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    .order-form input[type="submit"] {
+        margin-top: 25px;
+        height: auto;
+    }
+    .order-form p {
+        margin-top: 30px;
+    }
+    .order-form p a {
+        font-size: 11px;
+        transition: 0.3s;
+        color: rgb(14, 116, 144);
     }
 }
 @media screen and (max-width: 375px) {

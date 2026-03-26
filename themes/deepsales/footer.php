@@ -35,7 +35,7 @@
                     </nav>
                 </div>
             </div>
-            <?php if ( !array_key_exists('cookieAgree', $_COOKIE) ) { ?>
+            <?php if( !array_key_exists('cookieAgree', $_COOKIE) ) { ?>
                 <div class="cookie">
                     <div class="wrapper">
                         <div class="cookie__items">
@@ -61,6 +61,24 @@
                 <div class="form__background"></div>
                     <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
             </div>
+            <?php if( pll_current_language() == 'ru' && !array_key_exists('choseRu', $_COOKIE) ) { ?>
+                <div class="change-lang">
+                    <div class="form__background"></div>
+                    <div class="change-lang__items">
+                        <h5 class="title title__change-lang"><?= tof('pop-up_lang_title'); ?></h5>
+                        <div class="button-wrapper">
+                            <button class="button switch-lang__btn switch-lang__btn_no"><?= tof('pop-up_lang_no'); ?></button>
+                            <a href="" class="button switch-lang__btn switch-lang__btn_yes"><?= tof('pop-up_lang_yes'); ?></a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if(is_page([145, 406])); { ?>
+                <div class="order-form">
+                    <div class="form__background"></div>
+                    <?php echo do_shortcode('[contact-form-7 id="4bce052" title="Packages form"]'); ?>
+                </div>
+            <?php }?>
             <button class="totop">
                 <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.883789 10.4949L9.61106 1.76758L18.3383 10.4949" stroke="white" stroke-width="2.5"/>

@@ -4,7 +4,7 @@
                 <div class="hero-left">
                     <h1 class="title-hero"><?= $s['hero_title'] ?></h1>
                     <p class="text-hero"><?= $s['hero_text'] ?></p>
-                    <button class="button-hero callform"><?= $s['hero_text_btn'] ?></button>
+                    <button class="button-hero <?php echo (is_front_page()) ? 'callform' : 'go__package' ?>"><?= $s['hero_text_btn'] ?></button>
                 </div>
                 <div class="hero-right">
                     <picture>
