@@ -121,10 +121,27 @@
         });
 
 
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([.$?*|{}()[]\\\/+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+
+
+        console.log(document.cookie.indexOf('chosenRu'));
+        if (getCookie('chosenRu') == undefined) {
+                $('.change-lang').addClass('block');
+        
+            } else {
+
+                $('.change-lang').removeClass('block');
+        }
+
         $('.switch-lang__btn_no, a[hreflang="ru-RU"]').on('click', function() {
 
-            document.cookie = "choseRu=true; path=/; max-age=2592000";
-            $('.change-lang').css('display', 'none');
+            document.cookie = "chosenRu=true; path=/; max-age=2592000";
+            $('.change-lang').removeClass('block');
 
         });
 

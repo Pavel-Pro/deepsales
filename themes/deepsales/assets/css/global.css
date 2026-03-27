@@ -371,6 +371,7 @@ h5.title {
     border: 1px solid var(--blue);
 }
 .change-lang {
+    display: none;
     position: fixed;
     top: 0;
     left: 50%;
@@ -419,6 +420,9 @@ h5.title {
     color: rgb(14, 116, 144);
     background: transparent;
     border: 1px solid rgb(14, 116, 144);
+}
+.block {
+    display: block;
 }
 /* end totop button */
 @media screen and (max-width: 1300px) {
