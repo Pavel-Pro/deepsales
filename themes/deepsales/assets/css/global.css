@@ -424,6 +424,11 @@ h5.title {
 .block {
     display: block;
 }
+.order-form .price-hidden {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
 /* end totop button */
 @media screen and (max-width: 1300px) {
     .wrapper {

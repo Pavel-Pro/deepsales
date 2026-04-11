@@ -61,11 +61,6 @@
                 <div class="form__background"></div>
                     <?php echo do_shortcode('[contact-form-7 id="631e4ab" title="Callback"]'); ?>
             </div>
-            <?php if( array_key_exists('chosenRu', $_COOKIE) ) { ?>
-                <div class="test">
-                    test
-                </div>
-            <?php } ?>
             <?php if( pll_current_language() == 'ru' ) { ?>
                 <div class="change-lang">
                     <div class="form__background"></div>

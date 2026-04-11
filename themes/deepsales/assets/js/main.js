@@ -129,7 +129,7 @@
         }
 
 
-        console.log(document.cookie.indexOf('chosenRu'));
+        (document.cookie.indexOf('chosenRu'));
         if (getCookie('chosenRu') == undefined) {
                 $('.change-lang').addClass('block');
         
@@ -162,9 +162,10 @@
 
             let packageTitle =  $(this).siblings('.package__name').html();
             let packagePrice = $(this).siblings('.package__price').html();
+            let price = +packagePrice.replace(/[^0-9]/g, '');
 
             $('.order-form__title').html(`Замовлення курсу <span>"${packageTitle}"</span> ${packagePrice}`);
-
+            $('input[name="amount"]').val(price);
 
         });
 
@@ -172,5 +173,26 @@
             $('.order-form').hide();
             $('.body').css('overflow', 'visible');
         });
+
+
+        let formAction = $('#wpcf7-f518-o2').find('form');
+
+        formAction.on('wpcf7submit', function() {
+
+            console.log($(this).find( $('.wpcf7-submit') ).prop('value'));
+
+        });
+
+        // formAction.on('wpcf7mailsent', function() {
+        //     window.location.href = '/wayforpay';
+        // });
+
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            if ( '518' == event.detail.contactFormId ) {
+                location = '/wayforpay/';
+            }
+        }, false );
+
+
 
     }(jQuery));

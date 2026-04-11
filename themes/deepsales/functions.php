@@ -69,5 +69,100 @@ function deepsales_scripts() {
 }
 
 
+add_action('init', function() {
+    add_rewrite_rule('^wayforpay/?$', 'index.php?wayforpay=1', 'top');
+});
+
+add_filter('query_vars', function($vars) {
+    $vars[] = 'wayforpay';
+    return $vars;
+});
+
+
+add_action('wpcf7_before_send_mail', 'cf7_to_wayforpay_stable');
+function cf7_to_wayforpay_stable($contact_form) {
+    if ($contact_form->id() != 518) return;
+
+    $submission = WPCF7_Submission::get_instance();
+    if (!$submission) return;
+
+    $posted_data = $submission->get_posted_data();
+
+    // Чистим данные и считаем сумму БЕЗ ошибок во floatval
+    $amount = isset($posted_data['amount']) ? round(floatval($posted_data['amount']), 2) : 0;
+    
+    $wfp_data = [
+        'name'   => sanitize_text_field($posted_data['your-name'] ?? ''),
+        'phone'  => sanitize_text_field($posted_data['tel'] ?? ''),
+        'email'  => sanitize_email($posted_data['your-email'] ?? ''),
+        'amount' => (string)$amount
+    ];
+
+    // Генерируем уникальный ключ для текущего пользователя (на основе IP)
+    $user_key = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+    
+    // Сохраняем в базу данных на 10 минут
+    set_transient('wfp_order_' . $user_key, $wfp_data, 600);
+}
+
+// 3. Страница оплаты (Redirect)
+add_action('template_redirect', function() {
+    if (get_query_var('wayforpay')) {
+        
+        $user_key = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+        $data = get_transient('wfp_order_' . $user_key);
+
+        if (!$data) {
+            wp_die('Данные оплаты не найдены. Пожалуйста, вернитесь на форму и попробуйте еще раз.');
+        }
+
+        $merchantAccount = 'test_merch_n1';
+        $merchantSecretKey = 'flk3409refn54t54t*FNJRET';
+        $merchantDomainName = $_SERVER['HTTP_HOST'];
+        
+        $orderReference = 'ORDER_' . time();
+        $orderDate = time();
+        $currency = 'UAH';
+        $amount = $data['amount'];
+
+        $productName = 'Оплата услуги';
+        $productCount = 1;
+        $productPrice = $amount;
+
+        $sign_data = [
+            $merchantAccount, $merchantDomainName, $orderReference, 
+            $orderDate, $amount, $currency, $productName, $productCount, $productPrice
+        ];
+
+        $signature = hash_hmac('md5', implode(';', $sign_data), $merchantSecretKey);
+
+        $fields = [
+            'merchantAccount'    => $merchantAccount,
+            'merchantAuthType'   => 'SimpleSignature',
+            'merchantDomainName' => $merchantDomainName,
+            'orderReference'     => $orderReference,
+            'orderDate'          => $orderDate,
+            'amount'             => $amount,
+            'currency'           => $currency,
+            'productName[]'      => $productName,
+            'productCount[]'     => $productCount,
+            'productPrice[]'     => $productPrice,
+            'merchantSignature'  => $signature,
+            'clientFirstName'    => $data['name'],
+            'clientEmail'        => $data['email'],
+            'clientPhone'        => $data['phone'],
+        ];
+
+        echo '<html><head><meta charset="utf-8"></head><body>';
+        echo '<form id="wf" method="POST" action="https://secure.wayforpay.com/pay">';
+        foreach ($fields as $k => $v) {
+            echo '<input type="hidden" name="'.$k.'" value="'.htmlspecialchars($v, ENT_QUOTES).'">';
+        }
+        echo '</form><script>document.getElementById("wf").submit();</script></body></html>';
+        exit;
+    }
+});
+
+
 require_once __DIR__ . '/inc/carbon-fields/index.php';
 require_once __DIR__ . '/inc/polylang/index.php';
